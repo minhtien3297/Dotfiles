@@ -23,10 +23,10 @@
 # timezone = "local"
 
 ## enable or disable automatic sync
-# auto_sync = true
+auto_sync = true
 
 ## enable or disable automatic update checks
-# update_check = true
+update_check = true
 
 ## address of the sync server
 # sync_address = "https://api.atuin.sh"
@@ -34,7 +34,7 @@
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
 ## set it to 0 to sync after every command
-# sync_frequency = "10m"
+sync_frequency = "0"
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
@@ -60,18 +60,18 @@
 
 ## which style to use
 ## possible values: auto, full, compact
-# style = "auto"
+style = "auto"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
-# inline_height = 0
+inline_height = 0
 
 ## Invert the UI - put the search bar at the top , Default to `false`
 # invert = false
 
 ## enable or disable showing a preview of the selected command
 ## useful when the command is longer than the terminal width and is cut off
-# show_preview = false
+show_preview = true
 
 ## what to do when the escape key is pressed when searching
 ## possible values: return-original, return-query
@@ -120,7 +120,7 @@
 ## Configure whether or not to show the help row, which includes the current Atuin
 ## version (and whether an update is available), a keymap hint, and the total
 ## amount of commands in your history.
-# show_help = true
+show_help = true
 
 ## Configure whether or not to show tabs for search and inspect
 # show_tabs = true
@@ -143,7 +143,7 @@ enter_accept = true
 ## keybinding is defined.  If this is set to "emacs", "vim-insert", or
 ## "vim-normal", the startup keymap mode in the Atuin search is forced to be
 ## the specified one.
-# keymap_mode = "auto"
+keymap_mode = "vim-insert"
 
 ## Cursor style in each keymap mode.  If specified, the cursor style is changed
 ## in entering the cursor shape.  Available values are "default" and
@@ -197,6 +197,9 @@ enter_accept = true
 [keys]
 # Defaults to true. If disabled, using the up/down key won't exit the TUI when scrolled past the first/last entry.
 # scroll_exits = false
+
+[dotfiles]
+enabled = true
 
 [sync]
 # Enable sync v2 by default
