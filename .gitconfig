@@ -1,0 +1,9 @@
+[user]
+	name = minhtien3297
+	email = minhitne@gmail.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[diff]
+  external = difft
