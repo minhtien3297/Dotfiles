@@ -8,5 +8,5 @@ brew install stow
 
 ```
 cd Dotfiles
-stow .
+stow --adopt .
 ```
