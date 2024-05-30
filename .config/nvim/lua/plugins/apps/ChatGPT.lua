@@ -20,8 +20,6 @@ return {
         max_tokens = 3000,
       },
 
-      use_openai_functions_for_edit = true,
-
       popup_layout = {
         default = "center",
         center = {
