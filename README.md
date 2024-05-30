@@ -6,19 +6,25 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Programs
+2. Oh My ZSH
 
 ```
-brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim fzf zoxide ripgrep pngpaste git node jesseduffield/lazygit/lazygit yarn fd catimg git-flow cmake make gcc gh tidy-html5 curl tree-sitter
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-3. tpm
+3. Programs
+
+```
+brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim fzf zoxide ripgrep pngpaste git node jesseduffield/lazygit/lazygit yarn fd catimg git-flow cmake make gcc gh tidy-html5 curl tree-sitter atuin npm nvm pnpm curl grep aria2 ffmpeg yt-dlpa eza difftastic
+```
+
+4. tpm
 
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-4. FiraCode Nerd Font:
+5. FiraCode Nerd Font
 
 ```
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
@@ -36,3 +42,4 @@ stow --adopt .
 ```
 rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim
 ```
+
