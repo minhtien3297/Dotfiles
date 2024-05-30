@@ -4,6 +4,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
 
   opts = {
+    auto_close = true,
     focus = true,
 
     modes = {
