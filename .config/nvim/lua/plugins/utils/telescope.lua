@@ -54,6 +54,12 @@ return {
         layout_config = { height = 0.99, width = 0.99 },
       },
 
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
+      },
+
       extensions = {
         fzf = {
           fuzzy = true,                   -- false will only do exact matching
