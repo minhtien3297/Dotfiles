@@ -3,7 +3,22 @@
 	email = minhitne@gmail.com
 [pull]
 	rebase = true
+[fetch]
+  prune = true
+[push]
+  default = current
 [init]
 	defaultBranch = main
 [diff]
   external = difft
+  colorMoved = true
+[color]
+  ui = auto
+[core]
+  editor = nvim
+  whitespace = -trailing-space
+[rebase]
+  autoStash = true
+[rerere]
+  autoupdate = true
+  enabled = true
