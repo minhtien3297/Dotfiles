@@ -5,8 +5,6 @@
 	rebase = true
 [fetch]
   prune = true
-[push]
-  default = current
 [init]
 	defaultBranch = main
 [diff]
