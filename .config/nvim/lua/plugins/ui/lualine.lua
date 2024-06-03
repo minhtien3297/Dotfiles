@@ -4,33 +4,27 @@ return {
 
   config = function()
     local status_package_info, package_info = pcall(require, "package-info")
-    local status_trouble, trouble = pcall(require, "trouble")
 
     if status_package_info then
       vim.notify("package_info error")
     end
 
-    if status_trouble then
-      vim.notify("trouble error")
-    end
-
-    local symbols = trouble.statusline({
-      mode = "lsp_document_symbols",
-      groups = {},
-      title = false,
-      filter = { range = true },
-      format = "{kind_icon}{symbol.name:Normal}",
-      -- The following line is needed to fix the background color
-      -- Set it to the lualine section you want to use
-      hl_group = "lualine_c_normal",
-    })
-
     require("lualine").setup({
       options = {
-        icons_enabled = true,
         theme = "catppuccin",
-        component_separators = " ",
-        section_separators = "",
+        component_separators = "",
+        section_separators = { left = '', right = '' },
+
+        globalstatus = true,
+      },
+
+      extensions = {
+        'mason',
+        'oil',
+        'fzf',
+        'lazy',
+        'trouble',
+        'quickfix',
       },
 
       sections = {
@@ -39,7 +33,6 @@ return {
         lualine_c = {
           {
             "filename",
-
             path = 1,
           },
 
@@ -54,11 +47,6 @@ return {
             },
 
             update_in_insert = true,
-          },
-
-          {
-            symbols.get,
-            cond = symbols.has,
           },
 
           {
@@ -78,20 +66,21 @@ return {
               local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
               local clients = vim.lsp.get_active_clients()
 
-              if next(clients) == nil then
+              if not clients then
                 return msg
               end
 
               for _, client in ipairs(clients) do
                 local filetypes = client.config.filetypes
 
-                if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                if filetypes and vim.tbl_contains(filetypes, buf_ft) then
                   return client.name
                 end
               end
 
               return msg
             end,
+
 
             icon = " LSP:",
             color = { fg = "#ffffff", gui = "bold" },
