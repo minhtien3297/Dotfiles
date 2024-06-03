@@ -61,27 +61,20 @@ return {
           -- lsp
           {
             function()
-              local msg = "null"
-              local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-              local clients = vim.lsp.get_active_clients()
+              local clients = vim.lsp.get_clients()
+              local c = {}
 
               if not clients then
-                return msg
+                return ''
               end
 
-              for _, client in ipairs(clients) do
-                local filetypes = client.config.filetypes
-
-                if filetypes and vim.tbl_contains(filetypes, buf_ft) then
-                  return client.name
-                end
+              for _, client in pairs(clients) do
+                table.insert(c, client.name)
               end
 
-              return msg
+              return '\u{f085} ' .. table.concat(c, '|')
             end,
 
-
-            icon = " LSP:",
             color = { fg = "#ffffff", gui = "bold" },
           },
 
