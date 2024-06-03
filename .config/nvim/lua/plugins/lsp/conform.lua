@@ -44,14 +44,8 @@ return {
     vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = "*.ts,*.tsx,*.jsx,*.js",
       callback = function(args)
-        vim.cmd("TSToolsFixAll sync")
-        vim.cmd("TSToolsAddMissingImports sync")
-        vim.cmd("TSToolsOrganizeImports sync")
-        vim.cmd("TSToolsRemoveUnused sync")
-
         require("conform").format({ bufnr = args.buf })
       end,
     })
   end,
 }
-
