@@ -86,7 +86,7 @@ alias t='tmux'
 alias l='lg'
 alias c='clear'
 alias ls='eza -l --icons --git -a --no-user --no-permissions'
-alias upt= 'brew update && brew upgrade && brew cleanup'
+alias upt='brew update && brew upgrade && brew cleanup && sudo softwareupdate -i -a'
 alias zshrc='source ~/.zshrc'
 alias python=/usr/bin/python3
 
