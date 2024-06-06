@@ -16,6 +16,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   starship
   zoxide
+  fzf
   fzf-tab
   zsh-syntax-highlighting
   zsh-autosuggestions
