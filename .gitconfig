@@ -20,6 +20,7 @@
 [rerere]
   autoupdate = true
   enabled = true
-
+[maintenance]
+	repo = /Users/daominhtien/Dotfiles
 [includeIf "gitdir:~/work/"]
   path = ~/work/.gitconfig

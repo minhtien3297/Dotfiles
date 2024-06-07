@@ -33,6 +33,7 @@ gui:
 git:
   paging:
     externalDiffCommand: difft --color=always --display=inline --syntax-highlight=on
+  parseEmoji: true
 os:
   editPreset: 'nvim'
 customCommands:
