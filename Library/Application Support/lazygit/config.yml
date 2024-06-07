@@ -1,33 +1,40 @@
 gui:
   nerdFontsVersion: "3"
   sidePanelWidth: 0.2
+  theme:
+    activeBorderColor:
+      - '#f5e0dc'
+      - bold
+    inactiveBorderColor:
+      - '#a6adc8'
+    optionsTextColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#313244'
+    selectedRangeBgColor:
+      - '#313244'
+    cherryPickedCommitBgColor:
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#f5e0dc'
+    unstagedChangesColor:
+      - '#f38ba8'
+    defaultFgColor:
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
+      - bold
+    markedBaseCommitFgColor:
+      - '#89b4fa'
+    markedBaseCommitBgColor:
+      - '#f9e2af'
+  filterMode: fuzzy
+  showDivergenceFromBaseBranch: arrowAndNumber
 git:
   paging:
     externalDiffCommand: difft --color=always --display=inline --syntax-highlight=on
 os:
   editPreset: 'nvim'
-theme:
-  activeBorderColor:
-    - '#f5e0dc'
-    - bold
-  inactiveBorderColor:
-    - '#a6adc8'
-  optionsTextColor:
-    - '#89b4fa'
-  selectedLineBgColor:
-    - '#313244'
-  selectedRangeBgColor:
-    - '#313244'
-  cherryPickedCommitBgColor:
-    - '#45475a'
-  cherryPickedCommitFgColor:
-    - '#f5e0dc'
-  unstagedChangesColor:
-    - '#f38ba8'
-  defaultFgColor:
-    - '#cdd6f4'
-  searchingActiveBorderColor:
-    - '#f9e2af'
 customCommands:
   - key: "<c-v>"
     context: "global"
