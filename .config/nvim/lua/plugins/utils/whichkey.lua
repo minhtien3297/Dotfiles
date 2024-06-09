@@ -11,6 +11,7 @@ return {
     local status_builtin, builtin = pcall(require, "telescope.builtin")
     local status_trouble, trouble = pcall(require, "trouble")
     local status_chainsaw, chainsaw = pcall(require, "chainsaw")
+    local status_yazi, yazi = pcall(require, "yazi")
 
     if not status_builtin then
       vim.notify("telescope.builtin error")
@@ -24,6 +25,11 @@ return {
 
     if not status_chainsaw then
       vim.notify("chainsaw error")
+      return
+    end
+
+    if not status_yazi then
+      vim.notify("yazi error")
       return
     end
 
@@ -117,8 +123,21 @@ return {
       },
 
       [";"] = {
-        -- oil
-        [";"] = { "<cmd>Oil<CR>", "Toggle Oil" },
+        -- yazi
+        [";"] = {
+          function()
+            yazi.yazi()
+          end,
+          "Open Yazi"
+        },
+
+        -- yazi in cwd
+        ["a"] = {
+          function()
+            yazi.yazi(nil, vim.fn.getcwd())
+          end,
+          "Open Yazi in cwd"
+        },
 
         -- muren
         m = { "<cmd>MurenToggle<CR>", "Toggle Muren" },

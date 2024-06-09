@@ -15,7 +15,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 3. Programs
 
 ```
-brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim fzf zoxide ripgrep pngpaste git node jesseduffield/lazygit/lazygit yarn fd catimg git-flow cmake make gcc gh tidy-html5 curl tree-sitter atuin npm nvm pnpm curl grep aria2 ffmpeg yt-dlpa eza difftastic zsh
+brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim fzf zoxide ripgrep pngpaste git node jesseduffield/lazygit/lazygit yarn fd catimg git-flow cmake make gcc gh tidy-html5 curl tree-sitter atuin npm nvm pnpm curl grep aria2 ffmpeg yt-dlpa eza difftastic zsh yazi ffmpegthumbnailer unar jq poppler font-symbols-only-nerd-font glow exiftool ouch --cask font-fira-code-nerd-font
 ```
 
 4. tpm
@@ -24,17 +24,11 @@ brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-5. FiraCode Nerd Font
-
-```
-https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
-```
-
 # Config
 
 ```
 z Dotfiles
-stow --adopt .
+stow -R --adopt .
 ```
 
 # Uninstall nvim

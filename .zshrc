@@ -14,8 +14,8 @@ COMPLETION_WAITING_DOTS="true"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-  starship
   zoxide
+  starship
   fzf
   fzf-tab
   zsh-syntax-highlighting
@@ -97,7 +97,7 @@ alias -- sa='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_rsa'
 alias -- saw='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_ed25519'
 
 # lazygit
-lg()
+function lg()
 {
     export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
 
@@ -109,6 +109,15 @@ lg()
     fi
 }
 
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
