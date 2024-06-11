@@ -64,6 +64,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Completion styling for fzf-tab, NOTE: run exec zsh to enable 
+zstyle ':fzf-tab:*' popup-min-size 80 12
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
@@ -73,11 +74,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
 zstyle ':completion:*' menu no
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -l --icons --git -a  --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -l --icons --git --all --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 # preview directory's content with eza when completing zoxide
-zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -l --icons --git -a  --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -l --icons --git --all --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
+zstyle ':fzf-tab:complete:z:*' popup-pad 30 0
 # using popup tmux feature
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 

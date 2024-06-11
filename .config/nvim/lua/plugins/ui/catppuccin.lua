@@ -26,6 +26,7 @@ return {
       flash = true,
       rainbow_delimiters = true,
       lsp_trouble = true,
+      dashboard = true,
 
       indent_blankline = {
         enabled = true,
