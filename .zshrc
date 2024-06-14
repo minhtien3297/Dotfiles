@@ -122,5 +122,11 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# ngrok
+if command -v ngrok &>/dev/null; then
+    eval "$(ngrok completion)"
+fi
+
+
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"

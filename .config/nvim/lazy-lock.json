@@ -66,7 +66,7 @@
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
   "todo-comments.nvim": { "branch": "main", "commit": "a7e39ae9e74f2c8c6dc4eea6d40c3971ae84752d" },
-  "trouble.nvim": { "branch": "main", "commit": "3609bb9a82bbab1ef95cf2c27ce7e52267a7d40d" },
+  "trouble.nvim": { "branch": "main", "commit": "09380a8ed0694dbfbbcf59f9eaac499e259cb75c" },
   "ts-error-translator.nvim": { "branch": "main", "commit": "11ae55b28bde02663b5f983f59b0e3fd9c4e845b" },
   "typescript-tools.nvim": { "branch": "master", "commit": "c43d9580c3ff5999a1eabca849f807ab33787ea7" },
   "vim-tmux-navigator": { "branch": "master", "commit": "85b8e5f60c1690cde57dbb66467ce39cd1b63343" },
