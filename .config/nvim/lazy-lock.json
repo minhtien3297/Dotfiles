@@ -40,7 +40,7 @@
   "noice.nvim": { "branch": "main", "commit": "8f1d9966762e62fa8788e5fb1a5f6a86784221d9" },
   "nui.nvim": { "branch": "main", "commit": "a0fd35fcbb4cb479366f1dc5f20145fd718a3733" },
   "nvim-autopairs": { "branch": "master", "commit": "c15de7e7981f1111642e7e53799e1211d4606cb9" },
-  "nvim-chainsaw": { "branch": "main", "commit": "eef88b6a897a367202e99c61aad66c762c61ca0f" },
+  "nvim-chainsaw": { "branch": "main", "commit": "0a02bc950514057e93c1818080be441d6884cd93" },
   "nvim-cmp": { "branch": "main", "commit": "983453e32cb35533a119725883c04436d16c0120" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
   "nvim-lint": { "branch": "master", "commit": "941fa1220a61797a51f3af9ec6b7d74c8c7367ce" },
