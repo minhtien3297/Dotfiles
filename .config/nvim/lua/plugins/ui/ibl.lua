@@ -1,6 +1,6 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
-  dependencies = {  "HiPhish/rainbow-delimiters.nvim"},
+  dependencies = { "HiPhish/rainbow-delimiters.nvim" },
   main = "ibl",
   lazy = false,
 
@@ -32,6 +32,15 @@ return {
     vim.g.rainbow_delimiters = { highlight = highlight }
 
     require("ibl").setup({
+      exclude = {
+        filetypes = {
+          "lspinfo",
+          "packer",
+          "checkhealth",
+          "help",
+          "dashboard",
+        }
+      },
       scope = { highlight = highlight, },
     })
 
