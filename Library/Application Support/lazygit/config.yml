@@ -32,7 +32,7 @@ gui:
   showDivergenceFromBaseBranch: arrowAndNumber
 git:
   paging:
-    externalDiffCommand: difft --color=always --display=inline --syntax-highlight=on
+    externalDiffCommand: difft --color=always --syntax-highlight=on
   parseEmoji: true
 os:
   editPreset: 'nvim'
