@@ -117,9 +117,6 @@ return {
 
         -- lazygit
         f = { "<cmd>LazyGit<CR>", "LazyGit" },
-
-        -- chatgpt
-        g = { "<cmd>Telescope gpt<CR>", "Open chatGPT", mode = { "n", "v" } },
       },
 
       [";"] = {

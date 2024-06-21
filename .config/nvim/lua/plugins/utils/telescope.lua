@@ -6,7 +6,6 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
-    "HPRIOR/telescope-gpt",
     'nvim-telescope/telescope-ui-select.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
@@ -69,25 +68,6 @@ return {
           -- the default case_mode is "smart_case"
         },
 
-        gpt = {
-          title = "Gpt Actions",
-
-          commands = {
-            "add_tests",
-            "chat",
-            "docstring",
-            "explain_code",
-            "fix_bugs",
-            "grammar_correction",
-            "interactive",
-            "optimize_code",
-            "summarize",
-            "translate"
-          },
-
-          theme = telescope_themes.get_dropdown {}
-        },
-
         ["ui-select"] = {
           telescope_themes.get_dropdown {}
         }
@@ -96,7 +76,6 @@ return {
 
     telescope.load_extension("noice")
     telescope.load_extension("fzf")
-    telescope.load_extension("gpt")
     telescope.load_extension("ui-select")
   end,
 }
