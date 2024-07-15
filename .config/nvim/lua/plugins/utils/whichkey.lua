@@ -35,8 +35,6 @@ return {
     end
 
     wk.setup({
-      ignore_missing = true,
-
       layout = { align = "center" }
     })
 
@@ -63,8 +61,8 @@ return {
 
       -- remap
       { "<C-q>",            "<cmd>q<CR>",                               desc = "Exit file" },
-      { "<C-y>",            '"+y',                                      desc = "Copy to clipboard",                                      mode = { "n", "v" } },
-      { "<C-f>",            "magg=<S-g>`a",                             desc = "Format file",                                            mode = "n" },
+      { "<C-y>",            '"+y',                                      desc = "Copy to clipboard",             mode = { "n", "v" } },
+      { "<C-f>",            "magg=<S-g>`a",                             desc = "Format file",                   mode = "n" },
       {
         "<C-g>",
         function()
@@ -79,11 +77,11 @@ return {
         end,
         desc = "Toggle relative number"
       },
-      { "<S-l>", "<cmd>noh<CR>",                                        desc = "Clear search",                                        noremap = true, silent = true },
-      { "J",     "mzJ`z",                                               desc = "Cut line easier",                                     mode = "n" },
-      { "J",     ":m '>+1<CR>gv=gv",                                    desc = "Highlight rows down",                                 mode = "v" },
+      { "<S-l>", "<cmd>noh<CR>",                                        desc = "Clear search",                          noremap = true, silent = true },
+      { "J",     "mzJ`z",                                               desc = "Cut line easier",                       mode = "n" },
+      { "J",     ":m '>+1<CR>gv=gv",                                    desc = "Highlight rows down",                   mode = "v" },
       { "K",     function() vim.lsp.buf.hover() end,                    desc = "Hover code", },
-      { "K",     ":m '<-2<CR>gv=gv",                                    desc = "Highlight rows up",                                   mode = "v", },
+      { "K",     ":m '<-2<CR>gv=gv",                                    desc = "Highlight rows up",                     mode = "v", },
 
       -- yazi
       { ";;",    function() yazi.yazi() end,                            desc = "Open Yazi" },

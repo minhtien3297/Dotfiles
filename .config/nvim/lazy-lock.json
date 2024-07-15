@@ -38,7 +38,7 @@
   "mini.icons": { "branch": "main", "commit": "9d9d21868841ce0a26fb2b8ef0eba7021055145c" },
   "muren.nvim": { "branch": "main", "commit": "818c09097dba1322b2ca099e35f7471feccfef93" },
   "neoscroll.nvim": { "branch": "master", "commit": "a731f66f1d39ec6175fd201c5bf849e54abda99c" },
-  "noice.nvim": { "branch": "main", "commit": "1cbf3a4c81c7f519f177182f541e7b0514cde3c3" },
+  "noice.nvim": { "branch": "main", "commit": "d53a913c34eafb07970b8cd0505087898a92499f" },
   "nui.nvim": { "branch": "main", "commit": "a0fd35fcbb4cb479366f1dc5f20145fd718a3733" },
   "nvim-autopairs": { "branch": "master", "commit": "78a4507bb9ffc9b00f11ae0ac48243d00cb9194d" },
   "nvim-chainsaw": { "branch": "main", "commit": "42a3866bb1e226fec1831d3354b2a6eb6c9e3539" },
@@ -68,9 +68,9 @@
   "todo-comments.nvim": { "branch": "main", "commit": "313b04e5b02d29ab9275c9295ff5e2b73921b0eb" },
   "trouble.nvim": { "branch": "main", "commit": "026e420bf9878ee97133f8fbf906261f3249b17a" },
   "ts-error-translator.nvim": { "branch": "main", "commit": "11ae55b28bde02663b5f983f59b0e3fd9c4e845b" },
-  "typescript-tools.nvim": { "branch": "master", "commit": "5da4d695d66f676eb6ea766b946e86f93baaafe7" },
+  "typescript-tools.nvim": { "branch": "master", "commit": "3ecf6b29435dc7979eb5cdf1a9ff11bd65f5ea90" },
   "vim-tmux-navigator": { "branch": "master", "commit": "85b8e5f60c1690cde57dbb66467ce39cd1b63343" },
   "vim-visual-multi": { "branch": "master", "commit": "1c9207b28c8898ab01b54e6d6b61b0b820a814bc" },
-  "which-key.nvim": { "branch": "main", "commit": "4d5b8959fd2a4df065ff76ccb39019aaa70cb0dc" },
+  "which-key.nvim": { "branch": "main", "commit": "6e5b5b05085e5d3786096bb03aa465b588ddf17d" },
   "yazi.nvim": { "branch": "master", "commit": "296a41404994b1a337d6e321d00cd7af94ace7f2" }
 }
