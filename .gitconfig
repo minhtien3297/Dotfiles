@@ -22,5 +22,5 @@
   enabled = true
 [maintenance]
 	repo = /Users/daominhtien/Dotfiles
-[includeIf "gitdir:~/work/"]
-  path = ~/work/.gitconfig
+[includeIf "gitdir:~/Work/"]
+  path = ~/Work/.gitconfig
