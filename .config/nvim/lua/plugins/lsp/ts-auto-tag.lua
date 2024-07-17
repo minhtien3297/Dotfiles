@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-ts-autotag",
-  event = "InsertEnter",
+  event = "BufReadPre",
 
   config = function()
     require("nvim-ts-autotag").setup({
