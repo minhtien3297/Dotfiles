@@ -38,7 +38,7 @@
   "neoscroll.nvim": { "branch": "master", "commit": "a731f66f1d39ec6175fd201c5bf849e54abda99c" },
   "noice.nvim": { "branch": "main", "commit": "b97852ea8f04c51d2bd8ad033827c8189b542166" },
   "nui.nvim": { "branch": "main", "commit": "a0fd35fcbb4cb479366f1dc5f20145fd718a3733" },
-  "nvim-autopairs": { "branch": "master", "commit": "78a4507bb9ffc9b00f11ae0ac48243d00cb9194d" },
+  "nvim-autopairs": { "branch": "master", "commit": "e38c5d837e755ce186ae51d2c48e1b387c4425c6" },
   "nvim-chainsaw": { "branch": "main", "commit": "42a3866bb1e226fec1831d3354b2a6eb6c9e3539" },
   "nvim-cmp": { "branch": "main", "commit": "983453e32cb35533a119725883c04436d16c0120" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
