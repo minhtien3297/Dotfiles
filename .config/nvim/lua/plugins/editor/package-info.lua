@@ -3,19 +3,21 @@ return {
   ft = "json",
   dependencies = { "MunifTanjim/nui.nvim" },
 
-  opts = {
-    colors = {
-      outdated = "#f38ba8", -- Text color for outdated dependency virtual text
-    },
-
-    icons = {
-      enable = true,
-      style = {
-        outdated = " ▲ ",
+  config = function()
+    require("package-info").setup({
+      colors = {
+        outdated = "#f38ba8", -- Text color for outdated dependency virtual text
       },
-    },
 
-    hide_up_to_date = true,
-    hide_unstable_versions = true,
-  },
+      icons = {
+        enable = true,
+        style = {
+          outdated = " ▲ ",
+        },
+      },
+
+      hide_up_to_date = true,
+      hide_unstable_versions = true,
+    })
+  end
 }
