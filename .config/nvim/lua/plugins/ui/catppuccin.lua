@@ -23,6 +23,7 @@ return {
       notify = true,
       mason = true,
       noice = true,
+      fzf = true,
       flash = true,
       rainbow_delimiters = true,
       lsp_trouble = true,
