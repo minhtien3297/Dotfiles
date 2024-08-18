@@ -67,5 +67,5 @@
   "typescript-tools.nvim": { "branch": "master", "commit": "f8c2e0b36b651c85f52ad5c5373ff8b07adc15a7" },
   "vim-tmux-navigator": { "branch": "master", "commit": "85b8e5f60c1690cde57dbb66467ce39cd1b63343" },
   "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" },
-  "yazi.nvim": { "branch": "master", "commit": "bdc33d08f8ca56c66bdd34773722936069a9da5b" }
+  "yazi.nvim": { "branch": "master", "commit": "7f9b07f0b1d5083b88565333e01e446cbd2ee452" }
 }
