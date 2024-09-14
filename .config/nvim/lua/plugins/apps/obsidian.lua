@@ -9,27 +9,32 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
 
-  opts = {
-    dir = "~/Obsidian/knowledge-vault",
+  config = function()
+    require("obsidian").setup({
+      ui = { enable = false },
 
-    notes_subdir = "Notes/Inbox",
+      dir = "~/Obsidian/knowledge-vault",
 
-    new_notes_location = "notes_subdir",
+      notes_subdir = "Notes/Inbox",
 
-    attachments = {
-      img_folder = "Assets/imgs",
-    },
+      new_notes_location = "notes_subdir",
 
-    -- Optional, customize how names/IDs for new notes are created.
-    note_id_func = function(title)
-      local suffix = ""
-      if title ~= nil then
-        -- If title is given, transform it into valid file name.
-        suffix = title
-      else
-        suffix = suffix .. vim.fn.strftime("%c")
-      end
-      return suffix
-    end,
-  },
+      attachments = {
+        img_folder = "Assets/imgs",
+      },
+
+      -- Optional, customize how names/IDs for new notes are created.
+      note_id_func = function(title)
+        local suffix = ""
+        if title ~= nil then
+          -- If title is given, transform it into valid file name.
+          suffix = title
+        else
+          suffix = suffix .. vim.fn.strftime("%c")
+        end
+        return suffix
+      end,
+
+    })
+  end
 }
