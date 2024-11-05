@@ -15,7 +15,17 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 3. Programs
 
 ```
-brew install stow tmux bash ruby reattach-to-user-namespace urlview wget neovim fzf zoxide ripgrep pngpaste git node jesseduffield/lazygit/lazygit yarn fd catimg git-flow cmake make gcc gh tidy-html5 curl tree-sitter atuin npm nvm pnpm grep aria2 ffmpeg yt-dlp eza difftastic zsh yazi ffmpegthumbnailer unar jq poppler font-symbols-only-nerd-font glow exiftool ouch --cask font-fira-code-nerd-font imagemagick bat
+brew install stow tmux bash ruby reattach-to-user-namespace
+brew install urlview wget neovim fzf zoxide
+brew install ripgrep pngpaste git node jesseduffield/lazygit/lazygit
+brew install yarn fd catimg git-flow cmake
+brew install make gcc gh tidy-html5 curl
+brew install tree-sitter atuin npm nvm pnpm
+brew install grep aria2 ffmpeg yt-dlp eza
+brew install difftastic zsh yazi ffmpegthumbnailer unar
+brew install jq poppler font-symbols-only-nerd-font glow
+brew install exiftool ouch --cask font-fira-code-nerd-font imagemagick
+brew install bat
 ```
 
 4. tpm
