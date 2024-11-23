@@ -1,5 +1,3 @@
-local slow_format_filetypes = {}
-
 return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
@@ -7,37 +5,23 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { { "prettierd", "prettier" } },
-      typescript = { { "prettierd", "prettier" } },
-      typescriptreact = { { "prettierd", "prettier" } },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
       html = { "htmlbeautifier" },
-      css = { { "prettierd", "prettier" } },
+      css = { "prettier" },
       bash = { "beautysh" },
-      ["*"] = { "codespell" },
-      ["_"] = { "trim_whitespace", "trim_newlines" },
+      ["*"] = { "codespell", "trim_whitespace", "trim_newlines" },
     },
 
-    format_on_save = function(bufnr)
-      if slow_format_filetypes[vim.bo[bufnr].filetype] then
-        return
-      end
+    default_format_opts = {
+      lsp_format = "fallback",
+    },
 
-      local function on_format(err)
-        if err and err:match("timeout$") then
-          slow_format_filetypes[vim.bo[bufnr].filetype] = true
-        end
-      end
-
-      return { timeout_ms = 100, lsp_fallback = true }, on_format
-    end,
-
-    format_after_save = function(bufnr)
-      if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-        return
-      end
-
-      return { lsp_fallback = true }
-    end,
+    format_on_save = {
+      lsp_format = "fallback",
+      timeout_ms = 100,
+    },
   },
 
   config = function()
