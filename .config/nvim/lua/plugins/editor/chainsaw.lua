@@ -6,12 +6,8 @@ return {
     logStatements = {
       variableLog = {
         javascript = {
-          "/* prettier-ignore */ // %s", -- adding this line
-          'console.log("%s %s:", %s);',
-        },
-        typescript = {
-          "/* prettier-ignore */ // %s", -- adding this line
-          'console.log("%s %s:", %s);',
+          "/* prettier-ignore */ // {{marker}}",
+          'console.log("{{marker}} {{var}} - {{lnum}}:", {{var}});',
         },
       },
     },
