@@ -33,6 +33,7 @@ return {
     end)
 
     local servers = {
+      "ts_ls",
       "lua_ls",
       "bashls",
       "marksman",
