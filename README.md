@@ -25,7 +25,7 @@ brew install grep aria2 ffmpeg yt-dlp eza
 brew install difftastic zsh yazi ffmpegthumbnailer unar
 brew install jq poppler font-symbols-only-nerd-font glow
 brew install exiftool ouch --cask font-fira-code-nerd-font imagemagick
-brew install bat
+brew install bat btop
 ```
 
 4. tpm
