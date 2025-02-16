@@ -13,7 +13,7 @@ return {
     require("obsidian").setup({
       ui = { enable = false },
 
-      dir = "~/Obsidian/knowledge-vault",
+      dir = "/Users/daominhtien/Library/Mobile Documents/iCloud~md~obsidian/Documents/knowledge-vault",
 
       notes_subdir = "Notes/Inbox",
 
