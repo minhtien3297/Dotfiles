@@ -20,7 +20,7 @@ return {
       new_notes_location = "notes_subdir",
 
       attachments = {
-        img_folder = "Assets/imgs",
+        img_folder = "Assets/Images",
       },
 
       -- Optional, customize how names/IDs for new notes are created.
