@@ -2,9 +2,8 @@ lastupdatecheck: 0
 recentrepos:
     - /Users/daominhtien/Dotfiles
     - /Users/daominhtien/Library/Mobile Documents/iCloud~md~obsidian/Documents/knowledge-vault
-    - /Users/daominhtien/Work/Thermal-Printer-FE
 startuppopupversion: 5
-lastversion: 0.46.0
+lastversion: 0.47.1
 customcommandshistory:
     - qa
 hidecommandlog: false
