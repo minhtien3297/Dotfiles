@@ -16,7 +16,6 @@ local plugins = {
   { import = "plugins.editor" },
   { import = "plugins.lsp" },
   { import = "plugins.utils" },
-  { import = "plugins.apps" },
 }
 
 local opts = {
