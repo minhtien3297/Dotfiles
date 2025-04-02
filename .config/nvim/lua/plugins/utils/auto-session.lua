@@ -7,13 +7,14 @@ return {
     local as = require("auto-session")
 
     as.setup({
+      enabled = true,
       log_level = "error",
       auto_session_enabled = true,
-      auto_session_create_enabled = true,
-      auto_save_enabled = true,
-      auto_restore_enabled = true,
-      auto_session_use_git_branch = true,
-      auto_session_enable_last_session = vim.loop.cwd() == vim.loop.os_homedir(),
+      auto_create = true,
+      auto_save = true,
+      auto_restore = true,
+      use_git_branch = true,
+      auto_restore_last_session = vim.loop.cwd() == vim.loop.os_homedir(),
 
       cwd_change_handling = {
         post_cwd_changed_hook = function() -- example refreshing the lualine status line _after_ the cwd changes

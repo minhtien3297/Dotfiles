@@ -46,12 +46,6 @@ return {
       { "<leader>r",        function() vim.lsp.buf.rename() end,        desc = "Rename all references", },
       { "<leader>s",        "<cmd>LspRestart<CR>",                      desc = "Lsp restart" },
 
-      -- Obsidian
-      { "<leader>m",        "<cmd>ObsidianOpen<CR>",                    desc = "Open Obsidian" },
-      { "<leader>n",        "<cmd>ObsidianNew<CR>",                     desc = "New note" },
-      { "<leader>t",        "<cmd>ObsidianBacklinks<CR>",               desc = "List Back Links" },
-      { "<leader>i",        "<cmd>ObsidianPasteImg<CR>",                desc = "Paste Img" },
-
       -- lazygit
       { "<leader>f",        "<cmd>LazyGit<CR>",                         desc = "LazyGit" },
 
