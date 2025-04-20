@@ -2,7 +2,7 @@ lastupdatecheck: 0
 recentrepos:
     - /Users/daominhtien/Dotfiles
 startuppopupversion: 5
-lastversion: 0.48.0
+lastversion: 0.49.0
 customcommandshistory:
     - qa
 hidecommandlog: false
