@@ -7,7 +7,7 @@ if [ -f "package-lock.json" ]; then
   npm run $1
 elif [ -f "pnpm-lock.yaml" ]; then
   echo "Using pnpm for development."
-  pnpm
+  pnpm i
   pnpm run $1
 elif [ -f "yarn.lock" ]; then
   echo "Using yarn for development."
