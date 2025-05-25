@@ -88,7 +88,7 @@ customCommands:
         body: "Are you sure you want to commit?"
     command: "git commit --message '[{{.Form.Type}}]: {{.Form.Message}}'"
     loadingText: "Creating conventional commit..."
-    stream: true
+    output: log
   - key: '<c-p>'
     description: "Rebase from specific remote and branch"
     context: 'global'

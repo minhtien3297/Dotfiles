@@ -3,7 +3,7 @@ recentrepos:
     - /Users/daominhtien/Dotfiles
     - /Users/daominhtien/Projects/project-gallery
 startuppopupversion: 5
-lastversion: 0.50.0
+lastversion: 0.51.1
 customcommandshistory:
     - qa
 hidecommandlog: false
