@@ -40,7 +40,6 @@ return {
       "hydra_lsp",
       "html",
       "cssls",
-      "volar",
       "jsonls",
       "taplo",
       "tailwindcss",

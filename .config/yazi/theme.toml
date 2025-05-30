@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 syntect_theme = "~/dotfiles/.config/bat/themes/catppuccin-bat/themes/Catppuccin Mocha.tmTheme"
 
 [flavor]

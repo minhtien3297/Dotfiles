@@ -1,4 +1,4 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["<C-s>"]
 run = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
@@ -8,46 +8,46 @@ on = ["<Esc>"]
 run = "close"
 desc = "Cancel input"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["l"]
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["L"]
 run = "plugin bypass"
 desc = "Recursively enter child directory, skipping children with only a single subdirectory"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["H"]
 run = "plugin bypass --args=reverse"
 desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["p"]
 run = "plugin --sync smart-paste"
 desc = "Paste into the hovered directory or CWD"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["T"]
 run = "plugin --sync max-preview"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["K"]
 run = "seek -5"
 desc = "Seek up 5 units in the preview"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["J"]
 run = "seek 5"
 desc = "Seek down 5 units in the preview"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["d"]
 run = "remove --force"
 desc = "Move the files to the trash"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["D"]
 run = "remove --permanently --force"
 desc = "Permanently delete the files"
