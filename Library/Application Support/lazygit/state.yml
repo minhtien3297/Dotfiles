@@ -1,10 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
-    - /Users/daominhtien/dotfiles
     - /Users/daominhtien/Dotfiles
+    - /Users/daominhtien/dotfiles
     - /Users/daominhtien/Projects/project-gallery
 startuppopupversion: 5
-lastversion: 0.51.1
+lastversion: 0.52.0
 customcommandshistory:
     - qa
 hidecommandlog: false
