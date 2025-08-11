@@ -1,43 +1,48 @@
+# ========== GUI SETTINGS ==========
 gui:
   nerdFontsVersion: "3"
   sidePanelWidth: 0.2
   theme:
     activeBorderColor:
-      - '#f5e0dc'
+      - "#f5e0dc"
       - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - "#a6adc8"
     optionsTextColor:
-      - '#89b4fa'
+      - "#89b4fa"
     selectedLineBgColor:
-      - '#313244'
+      - "#313244"
     selectedRangeBgColor:
-      - '#313244'
+      - "#313244"
     cherryPickedCommitBgColor:
-      - '#45475a'
+      - "#45475a"
     cherryPickedCommitFgColor:
-      - '#f5e0dc'
+      - "#f5e0dc"
     unstagedChangesColor:
-      - '#f38ba8'
+      - "#f38ba8"
     defaultFgColor:
-      - '#cdd6f4'
+      - "#cdd6f4"
     searchingActiveBorderColor:
-      - '#f9e2af'
+      - "#f9e2af"
       - bold
     markedBaseCommitFgColor:
-      - '#89b4fa'
+      - "#89b4fa"
     markedBaseCommitBgColor:
-      - '#f9e2af'
+      - "#f9e2af"
   filterMode: fuzzy
   showDivergenceFromBaseBranch: arrowAndNumber
+# ========== GIT SETTINGS ==========
 git:
   paging:
     externalDiffCommand: difft --color=always --syntax-highlight=on
   parseEmoji: true
+# ========== OS SETTINGS ==========
 os:
-  editPreset: 'nvim'
+  editPreset: "nvim"
+# ========== CUSTOM COMMANDS ==========
 customCommands:
-  - key: "<c-v>"
+  # --- Create Conventional Commit ---
+  - key: "V"
     context: "global"
     description: "Create Commit"
     prompts:
@@ -89,19 +94,34 @@ customCommands:
     command: "git commit --message '[{{.Form.Type}}]: {{.Form.Message}}'"
     loadingText: "Creating conventional commit..."
     output: log
-  - key: '<c-p>'
-    description: "Rebase from specific remote and branch"
-    context: 'global'
-    loadingText: 'Rebasing ...'
+  # --- Pull from Specific Remote ---
+  - key: "p"
+    description: "Pull from a specific remote repository"
+    context: "global"
+    loadingText: "Pulling ..."
     prompts:
-      - type: 'input'
-        key: 'Remote'
-        title: "Remote:"
-        suggestions:
-          preset: 'remotes'
-      - type: 'input'
-        key: 'RemoteBranch'
-        title: "Remote branch:"
-        suggestions:
-          command: "git branch --remote --list '{{.Form.Remote}}/*' --format='%(refname:short)' | sed 's/{{.Form.Remote}}\\///'"
-    command: git stash && git fetch {{ .Form.Remote }} {{ .Form.RemoteBranch }} && git rebase {{ .Form.Remote }}/{{ .Form.RemoteBranch }} && git stash pop
+      - type: "menuFromCommand"
+        title: "Which remote repository to push to?"
+        command: bash -c "git remote --verbose | grep '(push)'"
+        filter: '(?P<remote>\S+)\s+(?P<url>\S+)\s+\(push\)'
+        valueFormat: "{{ .remote }}"
+        labelFormat: "{{ .remote | bold | cyan }} {{ .url }}"
+    command: git pull {{index .PromptResponses 0}} {{ .CheckedOutBranch.Name }}
+  # --- Push to a Specific Remote Repository ---
+  - key: "P"
+    description: "Push to a specific remote repository"
+    context: "global"
+    loadingText: "Pushing ..."
+    prompts:
+      - type: "menuFromCommand"
+        title: "Which remote repository to push to?"
+        command: bash -c "git remote --verbose | grep '(push)'"
+        filter: '(?P<remote>\S+)\s+(?P<url>\S+)\s+\(push\)'
+        valueFormat: "{{ .remote }}"
+        labelFormat: "{{ .remote | bold | cyan }} {{ .url }}"
+      - type: "menu"
+        title: "How to push?"
+        options:
+          - value: "push"
+          - value: "push --force-with-lease"
+    command: "git {{index .PromptResponses 1}} {{index .PromptResponses 0}}"
