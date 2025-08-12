@@ -42,7 +42,7 @@ os:
 # ========== CUSTOM COMMANDS ==========
 customCommands:
   # --- Create Conventional Commit ---
-  - key: "V"
+  - key: "<c-v>"
     context: "global"
     description: "Create Commit"
     prompts:
