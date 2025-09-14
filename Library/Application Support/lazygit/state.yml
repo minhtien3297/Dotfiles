@@ -3,7 +3,7 @@ recentrepos:
     - /Users/daominhtien/Dotfiles
     - /Users/daominhtien/dotfiles
 startuppopupversion: 5
-didshowhunkstaginghint: false
+didshowhunkstaginghint: true
 lastversion: 0.55.0
 customcommandshistory:
     - qa
