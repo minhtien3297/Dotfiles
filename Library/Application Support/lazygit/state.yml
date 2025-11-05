@@ -6,7 +6,7 @@ recentrepos:
     - /Users/daominhtien/dotfiles
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.55.1
+lastversion: 0.56.0
 customcommandshistory:
     - qa
 hidecommandlog: false

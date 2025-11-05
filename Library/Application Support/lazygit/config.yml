@@ -33,8 +33,8 @@ gui:
   showDivergenceFromBaseBranch: arrowAndNumber
 # ========== GIT SETTINGS ==========
 git:
-  paging:
-    externalDiffCommand: difft --color=always --syntax-highlight=on
+  pagers:
+    - externalDiffCommand: difft --color=always --syntax-highlight=on
   parseEmoji: true
 # ========== OS SETTINGS ==========
 os:
