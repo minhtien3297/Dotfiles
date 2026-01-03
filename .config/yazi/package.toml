@@ -3,5 +3,10 @@ use = "Reledia/glow"
 rev = "5ce76dc"
 hash = "52e5f5c602962e7cbf874da28f52ba45"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "03cdd4b"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+
 [flavor]
 deps = []
