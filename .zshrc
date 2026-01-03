@@ -98,6 +98,7 @@ alias python=/usr/bin/python3
 alias -- run='~/run_project.sh'
 alias -- sa='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_rsa'
 alias -- saw='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_ed25519'
+alias -- clean='mole'
 
 # lazygit
 function lg()
@@ -127,6 +128,5 @@ if command -v ngrok &>/dev/null; then
 fi
 
 eval "$(atuin init zsh)"
-eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 . "$HOME/.atuin/bin/env"
