@@ -102,29 +102,28 @@ alias -- saw='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_ed25519'
 # lazygit
 function lg()
 {
-    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+  export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
 
-    lazygit "$@"
+  lazygit "$@"
 
-    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
-    fi
+  if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+    cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+    rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+  fi
 }
 
 # yazi
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # ngrok
 if command -v ngrok &>/dev/null; then
-    eval "$(ngrok completion)"
+  eval "$(ngrok completion)"
 fi
 
 eval "$(atuin init zsh)"
