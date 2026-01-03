@@ -1,11 +1,6 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = '$all${custom.yazi}'
-
-# Completely disable the right prompt to avoid the Zsh RPROMPT bug
-right_format = ""
-
 command_timeout = 5000
 
 # Inserts a blank line between shell prompts
@@ -28,11 +23,6 @@ min_time_to_notify = 10
 success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
 error_symbol = '[✗](bold red) '
 vimcmd_symbol = '[V](bold green) '
-
-[custom.yazi]
-description = "Indicate the shell was launched by `yazi`"
-symbol = " "
-when = """ test -n "$YAZI_LEVEL" """
 
 [aws]
 symbol = "  "
