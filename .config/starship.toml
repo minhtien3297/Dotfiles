@@ -1,165 +1,171 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
-
-command_timeout = 5000
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Wait 10 milliseconds for starship to check files under the current directory.
-scan_timeout = 10
+format = """
+[](red)\
+$os\
+$username\
+[](bg:peach fg:red)\
+$directory\
+[](bg:yellow fg:peach)\
+$git_branch\
+$git_status\
+[](fg:yellow bg:green)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:green bg:sapphire)\
+$conda\
+[](fg:sapphire bg:lavender)\
+$time\
+[ ](fg:lavender)\
+$cmd_duration\
+$line_break\
+$character"""
 
-# battery
-[[battery.display]]
-threshold = 100
-style = 'bold yellow'
+palette = 'catppuccin_mocha'
 
-[cmd_duration]
-show_notifications = true
-min_time_to_notify = 10
+[os]
+disabled = false
+style = "bg:red fg:crust"
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = '[✗](bold red) '
-vimcmd_symbol = '[V](bold green) '
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
-[aws]
-symbol = "  "
+[username]
+show_always = true
+style_user = "bg:red fg:crust"
+style_root = "bg:red fg:crust"
+format = '[ $user]($style)'
 
-[buf]
-symbol = " "
+[directory]
+style = "bg:peach fg:crust"
+format = "[ $path ]($style)"
+truncation_length = 0
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [c]
 symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[directory]
-read_only = " 󰌾"
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
-[git_branch]
-symbol = " "
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [golang]
-symbol = " "
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
+[php]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [java]
 symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
-[julia]
-symbol = " "
+[kotlin]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[pijul_channel]
-symbol = " "
+[haskell]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [python]
-symbol = " "
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
 
-[rlang]
-symbol = "󰟔 "
+[docker_context]
+symbol = ""
+style = "bg:sapphire"
+format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
-[ruby]
-symbol = " "
+[conda]
+symbol = "  "
+style = "fg:crust bg:sapphire"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
 
-[rust]
-symbol = " "
+[time]
+disabled = false
+time_format = "%T"
+style = "bg:lavender"
+format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
-[scala]
-symbol = " "
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[V](bold fg:green)'
+vimcmd_replace_one_symbol = '[V](bold fg:lavender)'
+vimcmd_replace_symbol = '[V](bold fg:lavender)'
+vimcmd_visual_symbol = '[V](bold fg:yellow)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:lavender"
+disabled = false
+show_notifications = true
+min_time_to_notify = 10
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
@@ -188,5 +194,3 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
-
-palette = "catppuccin_mocha"
