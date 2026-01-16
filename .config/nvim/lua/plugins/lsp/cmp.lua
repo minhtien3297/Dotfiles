@@ -1,98 +1,120 @@
 return {
-  "hrsh7th/nvim-cmp",
-  event = "InsertEnter",
+	"hrsh7th/nvim-cmp",
+	event = { "InsertEnter", "CmdlineEnter" },
 
-  dependencies = {
-    "hrsh7th/cmp-nvim-lsp", -- lsp
-    "hrsh7th/cmp-nvim-lua", -- lua
-    "hrsh7th/cmp-buffer",   -- buffer
-    "hrsh7th/cmp-path",     -- path
-    "hrsh7th/cmp-cmdline",  -- cmdline
-    "hrsh7th/cmp-calc",     -- cmdline
-    "hrsh7th/cmp-vsnip",    -- vscode
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp", -- lsp
+		"hrsh7th/cmp-nvim-lua", -- lua
+		"hrsh7th/cmp-buffer", -- buffer
+		"hrsh7th/cmp-path", -- path
+		"hrsh7th/cmp-cmdline", -- cmdline
+		"hrsh7th/cmp-vsnip", -- vscode
 
-    { "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
-    "rafamadriz/friendly-snippets", -- useful snippets
-    "saadparwaiz1/cmp_luasnip",     -- snippets
-    "onsails/lspkind.nvim",
-    "VonHeikemen/lsp-zero.nvim",
-    "petertriho/cmp-git",
-    "SergioRibera/cmp-env"
-  },
+		{ "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
+		"rafamadriz/friendly-snippets", -- useful snippets
+		"saadparwaiz1/cmp_luasnip", -- snippets
+		"onsails/lspkind.nvim", -- vscode icons style
+		"SergioRibera/cmp-env", -- env
+	},
 
-  config = function()
-    local cmp = require("cmp")
-    local lsp_kind = require("lspkind")
-    local lsp_zero = require("lsp-zero")
+	config = function()
+		local cmp = require("cmp")
+		local luasnip = require("luasnip")
+		local lsp_kind = require("lspkind")
 
-    require("luasnip.loaders.from_vscode").lazy_load()
-    lsp_zero.extend_cmp()
-    local cmp_action = lsp_zero.cmp_action()
+		require("luasnip.loaders.from_vscode").lazy_load()
 
-    cmp.setup({
-      sources = {
-        { name = "path" },
-        { name = "buffer" },
-        { name = "luasnip" },
-        { name = "calc" },
-        { name = "vsnip" },
-        { name = "nvim_lsp" },
-        { name = "nvim_lua" },
-        { name = "codeium" },
-        { name = "git" },
-        { name = "dotenv" }
-      },
+		cmp.setup({
+			sources = {
+				{ name = "path" },
+				{ name = "buffer" },
+				{ name = "luasnip" },
+				{ name = "vsnip" },
+				{ name = "nvim_lsp" },
+				{ name = "nvim_lua" },
+				{ name = "codeium" },
+				{ name = "git" },
+				{ name = "dotenv" },
+			},
 
-      mapping = cmp.mapping.preset.insert({
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        ["<Tab>"] = cmp_action.luasnip_supertab(),
-        ["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
-      }),
+			mapping = {
+				["<CR>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						if luasnip.expandable() then
+							luasnip.expand()
+						else
+							cmp.confirm({
+								select = true,
+							})
+						end
+					else
+						fallback()
+					end
+				end),
 
-      window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
-      },
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
 
-      formatting = {
-        fields = { "abbr", "kind", "menu" },
-        format = lsp_kind.cmp_format({
-          mode = "symbol_text",  -- show only symbol annotations
-          maxwidth = 50,         -- prevent the popup from showing more than provided characters
-          ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
-          symbol_map = { Codeium = "", },
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+			},
 
-          before = function(entry, vim_item)
-            vim_item = require('tailwindcss-colorizer-cmp').formatter(entry, vim_item)
-            return vim_item
-          end
-        }),
-      },
-    })
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
 
-    require("cmp_git").setup()
+			formatting = {
+				fields = { "abbr", "kind", "menu" },
+				format = lsp_kind.cmp_format({
+					mode = "symbol_text", -- show only symbol annotations
+					maxwidth = 50, -- prevent the popup from showing more than provided characters
+					ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+					symbol_map = { Codeium = "" },
 
-    -- `/` cmdline setup.
-    cmp.setup.cmdline("/", {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = {
-        { name = "buffer" },
-      },
-    })
+					before = function(entry, vim_item)
+						vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
+						return vim_item
+					end,
+				}),
+			},
+		})
 
-    -- `:` cmdline setup.
-    cmp.setup.cmdline(":", {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = cmp.config.sources({
-        { name = "path" },
-      }, {
-        {
-          name = "cmdline",
-          option = {
-            ignore_cmds = { "Man", "!" },
-          },
-        },
-      }),
-    })
-  end,
+		-- `/` cmdline setup.
+		cmp.setup.cmdline("/", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = "buffer" },
+			},
+		})
+
+		-- `:` cmdline setup.
+		cmp.setup.cmdline(":", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path" },
+			}, {
+				{
+					name = "cmdline",
+					option = {
+						ignore_cmds = { "Man", "!" },
+					},
+				},
+			}),
+		})
+	end,
 }
