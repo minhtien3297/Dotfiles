@@ -54,3 +54,8 @@ vim.opt.colorcolumn = "0"
 
 -- enable hyperlink for markdown
 vim.opt.conceallevel = 2
+
+-- enable virtual line diagnostic
+vim.diagnostic.config({
+	virtual_lines = true,
+})
