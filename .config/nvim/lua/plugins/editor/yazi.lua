@@ -8,7 +8,7 @@ return {
 		require("yazi").setup({
 			open_for_directories = true,
 			floating_window_scaling_factor = 1,
-			yazi_floating_window_border = "rounded",
+			log_level = vim.log.levels.ON,
 		})
 	end,
 	init = function()
