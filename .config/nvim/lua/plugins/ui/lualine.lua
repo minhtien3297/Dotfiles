@@ -1,98 +1,95 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  lazy = false,
+	"nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	lazy = false,
 
-  config = function()
-    local status_package_info, package_info = pcall(require, "package-info")
+	config = function()
+		local status_package_info, package_info = pcall(require, "package-info")
 
-    if status_package_info then
-      vim.notify("package_info error")
-    end
+		if status_package_info then
+			vim.notify("package_info error")
+		end
 
-    require("lualine").setup({
-      options = {
-        theme = "catppuccin",
-        component_separators = "",
-        section_separators = { left = '', right = '' },
-        disabled_filetypes = {
-          "DashBoard"
-        },
-        globalstatus = true,
-      },
+		require("lualine").setup({
+			options = {
+				theme = "catppuccin",
+				component_separators = "",
+				section_separators = { left = "", right = "" },
+				globalstatus = true,
+			},
 
-      extensions = {
-        'mason',
-        'oil',
-        'fzf',
-        'lazy',
-        'trouble',
-        'quickfix',
-      },
+			extensions = {
+				"mason",
+				"fzf",
+				"lazy",
+				"trouble",
+				"quickfix",
+			},
 
-      sections = {
-        lualine_b = { "branch", "diff" },
+			sections = {
+				lualine_b = { "branch", "diff" },
 
-        lualine_c = {
-          {
-            "filename",
-            path = 1,
-          },
+				lualine_c = {
+					{
+						"filename",
+						path = 1,
+					},
 
-          {
-            "diagnostics",
+					{
+						"diagnostics",
 
-            symbols = {
-              error = "✘ ",
-              warn = "▲ ",
-              hint = "⚑ ",
-              info = "» ",
-            },
+						symbols = {
+							error = "✘ ",
+							warn = "▲ ",
+							hint = "⚑ ",
+							info = "» ",
+						},
 
-            update_in_insert = true,
-          },
+						update_in_insert = true,
+					},
 
-          {
-            function()
-              return package_info.get_status()
-            end,
+					{
+						function()
+							return package_info.get_status()
+						end,
 
-            color = { fg = "#ffffff", gui = "bold" },
-          }
-        },
+						color = { fg = "#ffffff", gui = "bold" },
+					},
+				},
 
-        lualine_x = {
-          -- lsp
-          {
-            function()
-              local clients = vim.lsp.get_clients()
-              local c = {}
+				lualine_x = {
+					-- lsp
+					{
+						function()
+							local clients = vim.lsp.get_clients()
+							local c = {}
 
-              if not clients then
-                return ''
-              end
+							if not clients then
+								return ""
+							end
 
-              for _, client in pairs(clients) do
-                table.insert(c, client.name)
-              end
+							for _, client in pairs(clients) do
+								table.insert(c, client.name)
+							end
 
-              return '\u{f085} ' .. table.concat(c, '|')
-            end,
+							return "\u{f085} " .. table.concat(c, "|")
+						end,
 
-            color = { fg = "#ffffff", gui = "bold" },
-          },
+						color = { fg = "#ffffff", gui = "bold" },
+					},
 
-          "encoding",
+					"encoding",
 
-          "filetype",
+					"filetype",
 
-          -- lazy updates
-          {
-            require("lazy.status").updates,
-            cond = require("lazy.status").has_updates,
-            color = { fg = "#ff9e64" },
-          },
-        },
-      },
-    })
-  end,
+					-- lazy updates
+					{
+						require("lazy.status").updates,
+						cond = require("lazy.status").has_updates,
+						color = { fg = "#ff9e64" },
+					},
+				},
+			},
+		})
+	end,
 }
