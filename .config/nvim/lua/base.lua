@@ -35,14 +35,14 @@ vim.opt.showmode = false
 vim.opt.wrap = true
 
 -- Search include all uppercase and lowercase
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Add color to line cursor is in
 vim.opt.cursorline = true
 
 -- Display theme color
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 -- decrease speed run command
 vim.opt.timeoutlen = 250
