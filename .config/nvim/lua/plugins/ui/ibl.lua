@@ -35,10 +35,8 @@ return {
       exclude = {
         filetypes = {
           "lspinfo",
-          "packer",
           "checkhealth",
           "help",
-          "dashboard",
         }
       },
       scope = { highlight = highlight, },
