@@ -26,6 +26,7 @@ brew install difftastic zsh yazi ffmpegthumbnailer unar
 brew install jq poppler font-symbols-only-nerd-font glow
 brew install exiftool ouch --cask font-fira-code-nerd-font imagemagick
 brew install bat btop
+npm install tree-sitter-cli
 ```
 
 4. tpm

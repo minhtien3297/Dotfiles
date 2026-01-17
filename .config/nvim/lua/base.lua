@@ -57,6 +57,6 @@ vim.opt.conceallevel = 2
 
 -- enable virtual line diagnostic
 vim.diagnostic.config({
-  virtual_text = true,
-  virtual_lines = false
+  virtual_text = false,
+  virtual_lines = true
 })
