@@ -1,11 +1,8 @@
 return {
-  'echasnovski/mini.icons',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  'nvim-mini/mini.nvim',
   lazy = false,
-  version = false,
 
   config = function()
     require('mini.icons').setup()
-    MiniIcons.mock_nvim_web_devicons()
   end
 }
