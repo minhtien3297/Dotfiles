@@ -6,7 +6,8 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
-    'nvim-telescope/telescope-ui-select.nvim',
+    "nvim-telescope/telescope-ui-select.nvim",
+    "nvim-telescope/telescope-frecency.nvim",
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make'
@@ -17,9 +18,21 @@ return {
     local telescope = require("telescope")
     local telescope_preview = require("telescope.previewers.utils")
     local telescope_themes = require("telescope.themes")
+    local actions = require("telescope.actions")
+    local telescope_config = require("telescope.config")
+
+    local vimgrep_arguments = { unpack(telescope_config.values.vimgrep_arguments) }
+    table.insert(vimgrep_arguments, "--glob")
+    table.insert(vimgrep_arguments, "!**/.git/*")
 
     telescope.setup({
       defaults = {
+        mappings = {
+          i = {
+            ["<esc>"] = actions.close
+          },
+        },
+
         preview = {
           mime_hook = function(filepath, bufnr, opts)
             local is_image = function(filepath)
@@ -51,11 +64,13 @@ return {
 
         layout_strategy = "vertical",
         layout_config = { height = 0.99, width = 0.99 },
+        vimgrep_arguments = vimgrep_arguments,
       },
 
       pickers = {
         find_files = {
-          hidden = true,
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+
         },
       },
 
@@ -77,5 +92,6 @@ return {
     telescope.load_extension("noice")
     telescope.load_extension("fzf")
     telescope.load_extension("ui-select")
+    telescope.load_extension("frecency")
   end,
 }
