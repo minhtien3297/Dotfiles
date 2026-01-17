@@ -8,7 +8,8 @@ return {
     focus.setup({
       ui = {
         number = false,
-        relativenumber = true,
+        relativenumber = false,
+        hybridnumber = true
       },
     })
 
