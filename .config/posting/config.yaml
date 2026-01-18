@@ -5,3 +5,5 @@ focus:
   on_request_open: "url"
 animation: "full"
 editor: "nvim"
+heading:
+  visible: false
