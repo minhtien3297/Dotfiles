@@ -1,0 +1,7 @@
+spacing: compact
+theme: 'catppuccin-mocha'
+focus:
+  on_response: "body"
+  on_request_open: "url"
+animation: "full"
+editor: "nvim"
