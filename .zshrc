@@ -130,3 +130,4 @@ fi
 eval "$(atuin init zsh)"
 source <(fzf --zsh)
 . "$HOME/.atuin/bin/env"
+. "$HOME/.local/bin/env"
