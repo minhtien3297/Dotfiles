@@ -39,7 +39,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```
 z Dotfiles
-stow -R --adopt .
+stow -R .
 ```
 
 # Uninstall nvim

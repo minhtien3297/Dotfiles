@@ -1,0 +1,132 @@
+# Mole Cleanup Preview - 2025-12-14 16:27:22
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== User essentials ===
+/Users/daominhtien/Library/Caches  # 21.62GB (237 items)
+/Users/daominhtien/Library/Logs  # 125.2MB (43 items)
+/Users/daominhtien/.Trash  # 97.1MB (3 items)
+/Users/daominhtien/Library/Caches/CloudKit  # 9.3MB (14 items)
+/Users/daominhtien/Library/Suggestions  # 9.0MB (15 items)
+
+=== Finder metadata ===
+
+=== macOS system caches ===
+/Users/daominhtien/Library/Saved Application State  # 1000KB (47 items)
+/Users/daominhtien/Library/Caches/com.apple.spotlight  # 4.0MB
+/Users/daominhtien/Library/Caches/com.apple.akd  # 4.3MB
+/Users/daominhtien/Library/Application Support/CloudDocs/session/db  # 5.6MB (6 items)
+
+=== Sandboxed app caches ===
+
+=== Browsers ===
+/Users/daominhtien/Library/Caches/com.apple.Safari/WebKitCache  # 4KB
+/Users/daominhtien/Library/Caches/Google/Chrome/Default  # 735.8MB
+/Users/daominhtien/Library/Application Support/Google/Chrome/ShaderCache/GPUCache  # 548KB (5 items)
+/Users/daominhtien/Library/Application Support/Google/Chrome/GrShaderCache/GPUCache  # 11.6MB (5 items)
+/Users/daominhtien/Library/Application Support/Google/Chrome/Default/GPUCache  # 548KB (5 items)
+/Users/daominhtien/Library/Caches/com.microsoft.edgemac  # 8.3MB (4 items)
+/Users/daominhtien/Library/Caches/company.thebrowser.Browser  # 19.6MB (4 items)
+/Users/daominhtien/Library/Caches/company.thebrowser.dia  # 140.1MB (5 items)
+/Users/daominhtien/Library/Caches/Comet/Default  # 114.1MB
+/Users/daominhtien/Library/Caches/zen/Profiles  # 1.05GB
+
+=== Cloud storage ===
+
+=== Office applications ===
+
+=== Developer tools ===
+/Users/daominhtien/.oh-my-zsh/cache  # 8KB (2 items)
+/Users/daominhtien/Library/Caches/com.postmanlabs.mac  # 80KB (2 items)
+/Users/daominhtien/Library/Caches/com.figma.Desktop  # 2.1MB (3 items)
+/Users/daominhtien/Library/Caches/SentryCrash  # 44KB (11 items)
+/Users/daominhtien/Library/Caches/com.crashlytics.data/com.remotemouse.remotemouseserver  # 200KB
+/Users/daominhtien/Library/Caches/Homebrew  # 1.48GB (8 items)
+
+=== Development applications ===
+/Users/daominhtien/Library/Caches/com.apple.dt.Xcode  # 2.2MB (4 items)
+/Users/daominhtien/Library/Developer/Xcode/iOS Device Logs  # 396KB (6 items)
+/Users/daominhtien/Library/Application Support/Code/logs  # 2.4MB (10 items)
+/Users/daominhtien/Library/Application Support/Code/Cache/Cache_Data  # 227.3MB
+/Users/daominhtien/Library/Application Support/Code/CachedExtensions  # 1.6MB (2 items)
+/Users/daominhtien/Library/Application Support/Code/CachedData  # 30.0MB (3 items)
+/Users/daominhtien/Library/Application Support/discord/Cache/Cache_Data  # 839.5MB
+/Users/daominhtien/Library/Caches/us.zoom.xos  # 156KB (3 items)
+/Users/daominhtien/Library/Caches/com.openai.chat  # 15.6MB (19 items)
+/Users/daominhtien/Library/Caches/com.figma.Desktop  # 2.1MB (3 items)
+/Users/daominhtien/Library/Caches/com.raycast.macos  # 13.2MB (6 items)
+/Users/daominhtien/Library/Caches/com.apple.Music  # 8.9MB
+/Users/daominhtien/Library/Caches/com.apple.TV  # 3.3MB (5 items)
+/Users/daominhtien/Library/Caches/com.colliderli.iina  # 112KB
+/Users/daominhtien/Library/Caches/com.todoist.mac.Todoist  # 140KB
+/Users/daominhtien  # 232KB (3 items)
+/Users/daominhtien/.lesshst  # 4KB
+/Users/daominhtien/.wget-hsts  # 4KB
+/Users/daominhtien/Library/Caches/notion.id  # 80KB (2 items)
+
+=== Virtual machine tools ===
+
+=== Application Support ===
+
+=== Uninstalled app data ===
+/Users/daominhtien/Library/Caches/com.adguard.mac.adguard  # 7.6MB
+/Users/daominhtien/Library/Caches/com.amazon.codewhisperer  # 344KB
+/Users/daominhtien/Library/Caches/org.swift.swiftpm  # 124KB
+/Users/daominhtien/Library/Caches/io.remnote  # 80KB
+/Users/daominhtien/Library/Caches/io.remnote.ShipIt  # 20KB
+/Users/daominhtien/Library/Caches/io.sentry  # 36KB
+/Users/daominhtien/Library/Logs/com.monsterstudiosinc.runeseeker  # 1.6MB
+/Users/daominhtien/Library/WebKit/com.adguard.mac.adguard  # 576KB
+/Users/daominhtien/Library/WebKit/com.amazon.codewhisperer  # 588KB
+/Users/daominhtien/Library/WebKit/com.avast.AAFM  # 476KB
+/Users/daominhtien/Library/WebKit/com.bitgapp.eqmac  # 2.3MB
+/Users/daominhtien/Library/WebKit/com.grammarly.GRLlamaOnboarding  # 728KB
+/Users/daominhtien/Library/WebKit/com.grammarly.ProjectLlama  # 412KB
+/Users/daominhtien/Library/WebKit/com.microsoft.edgemac  # 804KB
+/Users/daominhtien/Library/WebKit/com.monsterstudiosinc.runeseeker  # 648KB
+/Users/daominhtien/Library/WebKit/com.mschrage.fig  # 644KB
+/Users/daominhtien/Library/WebKit/com.vmware.horizon  # 536KB
+/Users/daominhtien/Library/WebKit/org.herf.Flux  # 448KB
+/Users/daominhtien/Library/HTTPStorages/com.adguard.mac.adguard  # 64KB
+/Users/daominhtien/Library/HTTPStorages/com.adguard.mac.adguard.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/com.alexzielenski.Mousecape  # 56KB
+/Users/daominhtien/Library/HTTPStorages/com.avast.AAFM  # 64KB
+/Users/daominhtien/Library/HTTPStorages/com.avast.AAFM.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/com.avast.av.uninstaller  # 64KB
+/Users/daominhtien/Library/HTTPStorages/com.avast.hub.alpha  # 80KB
+/Users/daominhtien/Library/HTTPStorages/com.bitgapp.eqmac  # 168KB
+/Users/daominhtien/Library/HTTPStorages/com.dropbox.DropboxMacUpdate  # 56KB
+/Users/daominhtien/Library/HTTPStorages/com.galambalazs.SmoothScroll  # 56KB
+/Users/daominhtien/Library/HTTPStorages/com.getdropbox.DropboxMetaInstaller  # 56KB
+/Users/daominhtien/Library/HTTPStorages/com.getdropbox.DropboxMetaInstaller.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/com.google.Keystone  # 2.1MB
+/Users/daominhtien/Library/HTTPStorages/com.mediaatelier.CheatSheet  # 2.0MB
+/Users/daominhtien/Library/HTTPStorages/com.microsoft.autoupdate.fba  # 6.1MB
+/Users/daominhtien/Library/HTTPStorages/com.microsoft.autoupdate2  # 64KB
+/Users/daominhtien/Library/HTTPStorages/com.microsoft.edgemac  # 2.0MB
+/Users/daominhtien/Library/HTTPStorages/com.microsoft.edgemac.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/com.mschrage.fig.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/org.herf.Flux.binarycookies  # 4KB
+/Users/daominhtien/Library/HTTPStorages/net.freemacsoft.AppCleaner  # 72KB
+/Users/daominhtien/Library/HTTPStorages/io.remnote  # 64KB
+
+=== Apple Silicon updates ===
+
+=== iOS device backups ===
+
+=== Time Machine failed backups ===
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 28.86GB
+# Items: 572
+# Categories: 84
+# Protected by whitelist: 15
