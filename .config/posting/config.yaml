@@ -1,4 +1,4 @@
-spacing: compact
+spacing: horizontal
 theme: 'catppuccin-mocha'
 focus:
   on_response: "body"
