@@ -132,3 +132,11 @@ eval "$(atuin init zsh)"
 source <(fzf --zsh)
 . "$HOME/.atuin/bin/env"
 . "$HOME/.local/bin/env"
+
+# Added by Antigravity
+export PATH="/Users/daominhtien/.antigravity/antigravity/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/daominhtien/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
