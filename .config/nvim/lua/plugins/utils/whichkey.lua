@@ -12,6 +12,7 @@ return {
     local status_trouble, trouble = pcall(require, "trouble")
     local status_chainsaw, chainsaw = pcall(require, "chainsaw")
     local status_yazi, yazi = pcall(require, "yazi")
+    local status_lazydocker, lazydocker = pcall(require, "lazydocker")
 
     if not status_builtin then
       vim.notify("telescope.builtin error")
@@ -33,6 +34,11 @@ return {
       return
     end
 
+    if not status_lazydocker then
+      vim.notify("lazydocker error")
+      return
+    end
+
     wk.setup({
       layout = { align = "center" }
     })
@@ -49,13 +55,20 @@ return {
       -- lazygit
       { "<leader>f",        "<cmd>LazyGit<CR>",                         desc = "LazyGit" },
 
+      -- lazydocker
+      {
+        "<leader>d",
+        function() lazydocker.open() end,
+        desc = "LazyGit"
+      },
+
       -- Markdown Preview
-      { "<C-e>",            "<cmd>MarkdownPreviewToggle<CR>",           desc = "Toggle Markdown Preview" },
+      { "<C-e>", "<cmd>MarkdownPreviewToggle<CR>", desc = "Toggle Markdown Preview" },
 
       -- remap
-      { "<C-q>",            "<cmd>q<CR>",                               desc = "Exit file" },
-      { "<C-y>",            '"+y',                                      desc = "Copy to clipboard",             mode = { "n", "v" } },
-      { "<C-f>",            "magg=<S-g>`a",                             desc = "Format file",                   mode = "n" },
+      { "<C-q>", "<cmd>q<CR>",                     desc = "Exit file" },
+      { "<C-y>", '"+y',                            desc = "Copy to clipboard",      mode = { "n", "v" } },
+      { "<C-f>", "magg=<S-g>`a",                   desc = "Format file",            mode = "n" },
       {
         "<C-g>",
         function()

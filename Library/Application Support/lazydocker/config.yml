@@ -1,0 +1,12 @@
+gui:
+  sidePanelWidth: 0.2
+  theme:
+    activeBorderColor:
+      - "#f5e0dc"
+      - bold
+    inactiveBorderColor:
+      - "#a6adc8"
+    selectedLineBgColor:
+      - "#313244"
+    optionsTextColor:
+      - "#89b4fa"

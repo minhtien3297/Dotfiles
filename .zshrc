@@ -88,6 +88,7 @@ zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 alias n='nvim'
 alias t='tmux'
 alias l='lg'
+alias d='lazydocker'
 alias p='posting'
 alias c='clear'
 alias ls='eza -l --icons --git -a --no-user --no-permissions'
