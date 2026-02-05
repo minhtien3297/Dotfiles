@@ -13,6 +13,7 @@ return {
     local status_chainsaw, chainsaw = pcall(require, "chainsaw")
     local status_yazi, yazi = pcall(require, "yazi")
     local status_lazydocker, lazydocker = pcall(require, "lazydocker")
+    local status_render_markdown, render_markdown = pcall(require, "render-markdown")
 
     if not status_builtin then
       vim.notify("telescope.builtin error")
@@ -36,6 +37,11 @@ return {
 
     if not status_lazydocker then
       vim.notify("lazydocker error")
+      return
+    end
+
+    if not status_render_markdown then
+      vim.notify("render markdown error")
       return
     end
 
@@ -63,12 +69,16 @@ return {
       },
 
       -- Markdown Preview
-      { "<C-e>", "<cmd>MarkdownPreviewToggle<CR>", desc = "Toggle Markdown Preview" },
+      {
+        "<C-e>",
+        function() render_markdown.preview() end,
+        desc = "Toggle Markdown Preview"
+      },
 
       -- remap
-      { "<C-q>", "<cmd>q<CR>",                     desc = "Exit file" },
-      { "<C-y>", '"+y',                            desc = "Copy to clipboard",      mode = { "n", "v" } },
-      { "<C-f>", "magg=<S-g>`a",                   desc = "Format file",            mode = "n" },
+      { "<C-q>", "<cmd>q<CR>",   desc = "Exit file" },
+      { "<C-y>", '"+y',          desc = "Copy to clipboard", mode = { "n", "v" } },
+      { "<C-f>", "magg=<S-g>`a", desc = "Format file",       mode = "n" },
       {
         "<C-g>",
         function()
