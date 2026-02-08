@@ -25,11 +25,10 @@ brew install grep aria2 ffmpeg yt-dlp eza
 brew install difftastic zsh yazi ffmpegthumbnailer unar
 brew install jq poppler font-symbols-only-nerd-font glow
 brew install exiftool ouch --cask font-fira-code-nerd-font imagemagick
-brew install bat btop jesseduffield/lazydocker/lazydocker
+brew install bat btop jesseduffield/lazydocker/lazydocker mole
 curl -LsSf https://astral.sh/uv/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/tw93/Mole/main/scripts/setup-quick-launchers.sh | bash
 uv tool install --python 3.12 posting
-
-
 ```
 
 4. tpm
