@@ -8,3 +8,5 @@ animation: "full"
 editor: "nvim"
 heading:
   visible: false
+keymap:
+  send-request: ctrl+r
