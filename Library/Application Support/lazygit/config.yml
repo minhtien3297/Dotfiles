@@ -101,7 +101,7 @@ customCommands:
     loadingText: "Pulling ..."
     prompts:
       - type: "menuFromCommand"
-        title: "Which remote repository to push to?"
+        title: "Which remote repository to pull from?"
         command: bash -c "git remote --verbose | grep '(push)'"
         filter: '(?P<remote>\S+)\s+(?P<url>\S+)\s+\(push\)'
         valueFormat: "{{ .remote }}"
