@@ -1,8 +1,5 @@
 return {
 	"mikavilpas/yazi.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
 	event = "VeryLazy",
 	config = function()
 		require("yazi").setup({

@@ -3,17 +3,6 @@ return {
   tag = "0.1.6",
   event = "VeryLazy",
 
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-lua/popup.nvim",
-    "nvim-telescope/telescope-ui-select.nvim",
-    "nvim-telescope/telescope-frecency.nvim",
-    {
-      'nvim-telescope/telescope-fzf-native.nvim',
-      build = 'make'
-    }
-  },
-
   config = function()
     local telescope = require("telescope")
     local telescope_preview = require("telescope.previewers.utils")
@@ -90,8 +79,5 @@ return {
     })
 
     telescope.load_extension("noice")
-    telescope.load_extension("fzf")
-    telescope.load_extension("ui-select")
-    telescope.load_extension("frecency")
   end,
 }

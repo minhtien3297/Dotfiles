@@ -3,12 +3,6 @@ return {
   cmd = { "LspInfo", "LspInstall", "LspStart" },
   event = { "BufReadPre", "BufNewFile" },
 
-  dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    "lukas-reineke/lsp-format.nvim",
-    "mfussenegger/nvim-lint",
-  },
-
   config = function()
     local lint = require("lint")
     local lsp_format = require("lsp-format")

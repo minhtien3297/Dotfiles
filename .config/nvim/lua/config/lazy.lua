@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 local plugins = {
+	{ import = "plugins.shared" },
 	{ import = "plugins.ui" },
 	{ import = "plugins.editor" },
 	{ import = "plugins.lsp" },

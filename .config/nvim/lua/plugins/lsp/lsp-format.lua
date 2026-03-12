@@ -1,0 +1,4 @@
+return {
+  "lukas-reineke/lsp-format.nvim",
+  lazy = true,
+}

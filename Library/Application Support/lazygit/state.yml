@@ -1,12 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/daominhtien/Dotfiles
-    - /Users/daominhtien/Projects/code-challenge
     - /Users/daominhtien/Thoughts
     - /Users/daominhtien/dotfiles
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.59.0
+lastversion: 0.60.0
 customcommandshistory:
     - qa
 hidecommandlog: false

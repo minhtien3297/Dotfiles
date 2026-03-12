@@ -2,21 +2,6 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = { "InsertEnter", "CmdlineEnter" },
 
-	dependencies = {
-		"hrsh7th/cmp-nvim-lsp", -- lsp
-		"hrsh7th/cmp-nvim-lua", -- lua
-		"hrsh7th/cmp-buffer", -- buffer
-		"hrsh7th/cmp-path", -- path
-		"hrsh7th/cmp-cmdline", -- cmdline
-		"hrsh7th/cmp-vsnip", -- vscode
-
-		{ "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
-		"rafamadriz/friendly-snippets", -- useful snippets
-		"saadparwaiz1/cmp_luasnip", -- snippets
-		"onsails/lspkind.nvim", -- vscode icons style
-		"SergioRibera/cmp-env", -- env
-	},
-
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
