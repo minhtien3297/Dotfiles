@@ -18,13 +18,21 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 local plugins = {
 	{ import = "plugins.ai" },
-	{ import = "plugins.completion" },
+	{ import = "plugins.completion.cmp" },
+	{ import = "plugins.completion.snippets" },
 	{ import = "plugins.editing" },
 	{ import = "plugins.git" },
 	{ import = "plugins.language" },
+	{ import = "plugins.language.lsp" },
+	{ import = "plugins.language.treesitter" },
+	{ import = "plugins.language.typescript" },
 	{ import = "plugins.navigation" },
+	{ import = "plugins.navigation.telescope" },
 	{ import = "plugins.ui" },
+	{ import = "plugins.ui.noice" },
+	{ import = "plugins.ui.ufo" },
 	{ import = "plugins.workspace" },
+	{ import = "plugins.workspace.docker" },
 }
 
 local opts = {
