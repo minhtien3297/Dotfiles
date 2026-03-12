@@ -5,10 +5,6 @@ return {
 	config = function()
 		local status_package_info, package_info = pcall(require, "package-info")
 
-		if status_package_info then
-			vim.notify("package_info error")
-		end
-
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
@@ -49,6 +45,10 @@ return {
 
 					{
 						function()
+							if not status_package_info then
+								return ""
+							end
+
 							return package_info.get_status()
 						end,
 
