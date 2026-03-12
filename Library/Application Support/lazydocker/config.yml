@@ -6,7 +6,25 @@ gui:
       - bold
     inactiveBorderColor:
       - "#a6adc8"
-    selectedLineBgColor:
-      - "#313244"
     optionsTextColor:
       - "#89b4fa"
+    selectedLineBgColor:
+      - "#313244"
+
+logs:
+  since: 15m
+
+commandTemplates:
+  serviceLogs: "{{ .DockerCompose }} logs --since=15m --tail=200 --follow {{ .Service.Name }}"
+  viewServiceLogs: "{{ .DockerCompose }} logs --tail=200 --follow {{ .Service.Name }}"
+  allLogs: "{{ .DockerCompose }} logs --since=15m --tail=200 --follow"
+
+stats:
+  maxDuration: 90s
+  graphs:
+    - caption: CPU (%)
+      statPath: DerivedStats.CPUPercentage
+      color: cyan
+    - caption: Memory (%)
+      statPath: DerivedStats.MemoryPercentage
+      color: green
