@@ -4,31 +4,14 @@ return {
   build = ":TSUpdate",
 
   config = function()
-    local parser_install_dir = vim.fs.joinpath(vim.fn.stdpath("cache"), "treesitter")
+    local parser_install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "treesitter", "parsers")
+    vim.fn.mkdir(parser_install_dir, "p")
     vim.opt.runtimepath:append(parser_install_dir)
 
     require("nvim-treesitter.configs").setup({
       parser_install_dir = parser_install_dir,
-      ensure_installed = {
-        "bash",
-        "css",
-        "html",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
-        "lua",
-        "luadoc",
-        "markdown",
-        "markdown_inline",
-        "query",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "yaml",
-      },
+      ensure_installed = "all",
+      ignore_install = { "ipkg" },
       auto_install = true,
       sync_install = false,
       highlight = {
