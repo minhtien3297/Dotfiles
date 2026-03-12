@@ -27,7 +27,12 @@ brew install \
   grep aria2 ffmpeg yt-dlp eza difftastic zsh yazi \
   ffmpegthumbnailer unar jq poppler glow exiftool ouch \
   imagemagick bat btop jesseduffield/lazydocker/lazydocker \
-  mole uv
+  mole uv gemini-cli
+
+# Install CLI apps (Casks)
+brew install --cask \
+  codex \
+  copilot-cli
 
 # Install Nerd Fonts (Casks)
 brew install --cask \
@@ -51,4 +56,3 @@ stow -R .
 ```bash
 rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim
 ```
-
