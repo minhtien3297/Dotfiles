@@ -1,19 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Check for the existence of lockfiles
-if [ -f "package-lock.json" ]; then
+set -euo pipefail
+
+task="${1:-dev}"
+
+run_with_manager() {
+  local manager="$1"
+  local lockfile="$2"
+  shift 2
+
+  if [[ ! -d node_modules || "$lockfile" -nt node_modules ]]; then
+    echo "Installing dependencies with ${manager}..."
+    "$@"
+  else
+    echo "Dependencies already look up to date for ${manager}."
+  fi
+}
+
+if [[ -f package-lock.json ]]; then
   echo "Using npm for development."
-  npm i
-  npm run $1
-elif [ -f "pnpm-lock.yaml" ]; then
+  run_with_manager npm package-lock.json npm install
+  npm run "$task"
+elif [[ -f pnpm-lock.yaml ]]; then
   echo "Using pnpm for development."
-  pnpm i
-  pnpm run $1
-elif [ -f "yarn.lock" ]; then
+  run_with_manager pnpm pnpm-lock.yaml pnpm install
+  pnpm run "$task"
+elif [[ -f yarn.lock ]]; then
   echo "Using yarn for development."
-  yarn
-  yarn $1
+  run_with_manager yarn yarn.lock yarn install
+  yarn "$task"
 else
-  echo "No lockfile found!"
+  echo "No supported lockfile found in $(pwd)."
+  exit 1
 fi
-

@@ -1,24 +1,33 @@
-[user]
-	name = minhtien3297
-	email = minhitne@gmail.com
-[pull]
-	rebase = true
+[color]
+	ui = auto
+
+[core]
+	editor = nvim
+	whitespace = -trailing-space
+
+[diff]
+	colorMoved = true
+	external = difft
+
 [fetch]
-  prune = true
+	prune = true
+
 [init]
 	defaultBranch = main
-[diff]
-  external = difft
-  colorMoved = true
-[color]
-  ui = auto
-[core]
-  editor = nvim
-  whitespace = -trailing-space
-[rebase]
-  autoStash = true
-[rerere]
-  autoupdate = true
-  enabled = true
+
 [maintenance]
 	repo = /Users/daominhtien/Dotfiles
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[rerere]
+	autoupdate = true
+	enabled = true
+
+[user]
+	email = minhitne@gmail.com
+	name = minhtien3297

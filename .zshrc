@@ -1,60 +1,56 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export LANG="en_US.UTF-8"
+export MANPATH="/usr/local/man${MANPATH:+:$MANPATH}"
+export NVM_DIR="$HOME/.nvm"
 
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
 
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+typeset -U path fpath
+
+for dir in \
+  /opt/homebrew/bin \
+  /opt/homebrew/sbin \
+  "$HOME/.antigravity/antigravity/bin"
+do
+  [[ -d "$dir" ]] && path=("$dir" $path)
+done
+
+for dir in \
+  "$HOME/.docker/completions" \
+  "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-completions/src"
+do
+  [[ -d "$dir" ]] && fpath=("$dir" $fpath)
+done
+
 plugins=(
   zoxide
   starship
-  fzf
   fzf-tab
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-completions
 )
 
-# add zsh-completions path
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+source_if_exists() {
+  [[ -r "$1" ]] && source "$1"
+}
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
-# User configuration
-export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# Homebrew path
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-export PATH=/opt/homebrew/bin:$PATH
-
-# Keybindings
 bindkey -e
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 
-# History
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -63,28 +59,18 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Completion styling for fzf-tab, NOTE: run exec zsh to enable 
 zstyle ':fzf-tab:*' popup-min-size 80 12
-# disable sort when completing `git checkout`
-zstyle ':completion:*:git-checkout:*' sort false
-# set descriptions format to enable group support
-zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
-zstyle ':completion:*' menu no
-# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:*' switch-group '<' '>'
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -l --icons --git --all --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
-# switch group using `<` and `>`
-zstyle ':fzf-tab:*' switch-group '<' '>'
-# preview directory's content with eza when completing zoxide
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -l --icons --git --all --no-filesize --no-time --no-user --no-permissions --color=always $realpath'
 zstyle ':fzf-tab:complete:z:*' popup-pad 30 0
-# using popup tmux feature
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
 
-### alias
 alias n='nvim'
 alias t='tmux'
 alias l='lg'
@@ -93,56 +79,62 @@ alias c='clear'
 alias ls='eza -l --icons --git -a --no-user --no-permissions'
 alias upt='brew update && brew upgrade && brew cleanup && clear'
 alias zshrc='source ~/.zshrc'
-alias python=/usr/bin/python3
-
-# alias functions
+alias python='/usr/bin/python3'
 alias -- run='~/run_project.sh'
 alias -- sa='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_rsa'
 alias -- saw='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_ed25519'
 
-# lazygit
-function lg()
-{
-  export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+lg() {
+  local new_dir_file="$HOME/.lazygit/newdir"
 
+  export LAZYGIT_NEW_DIR_FILE="$new_dir_file"
   lazygit "$@"
 
-  if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-    cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-    rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+  if [[ -f "$new_dir_file" ]]; then
+    local new_dir
+    new_dir="$(<"$new_dir_file")"
+    [[ -n "$new_dir" ]] && builtin cd -- "$new_dir"
+    rm -f -- "$new_dir_file"
   fi
 }
 
-# yazi
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+y() {
+  local tmp cwd
+
+  tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
   command yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd < "$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  cwd="$(<"$tmp")"
+  [[ -n "$cwd" && "$cwd" != "$PWD" ]] && builtin cd -- "$cwd"
   rm -f -- "$tmp"
 }
 
-# ngrok
-if command -v ngrok &>/dev/null; then
+if command -v ngrok >/dev/null 2>&1; then
   eval "$(ngrok completion)"
 fi
 
-eval "$(atuin init zsh)"
-source <(fzf --zsh)
-. "$HOME/.atuin/bin/env"
-. "$HOME/.local/bin/env"
+if [[ -o interactive && -t 0 ]]; then
+  if command -v atuin >/dev/null 2>&1; then
+    eval "$(atuin init zsh)"
+  fi
 
-# Added by Antigravity
-export PATH="/Users/daominhtien/.antigravity/antigravity/bin:$PATH"
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/daominhtien/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
+  if command -v fzf >/dev/null 2>&1; then
+    source <(fzf --zsh)
+  fi
+fi
 
-# Mole shell completion
-if output="$(mole completion zsh 2>/dev/null)"; then eval "$output"; fi
+source_if_exists "$HOME/.atuin/bin/env"
+source_if_exists "$HOME/.local/bin/env"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if command -v mole >/dev/null 2>&1; then
+  eval "$(mole completion zsh 2>/dev/null)"
+fi
+
+load_nvm() {
+  unfunction nvm node npm npx pnpm yarn 2>/dev/null
+  source_if_exists "$NVM_DIR/nvm.sh"
+  source_if_exists "$NVM_DIR/bash_completion"
+}
+
+for cmd in nvm node npm npx pnpm yarn; do
+  eval "${cmd}() { load_nvm; ${cmd} \"\$@\"; }"
+done
