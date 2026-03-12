@@ -1,6 +1,6 @@
 return {
   "f-person/git-blame.nvim",
-  lazy = false,
+  event = "BufReadPost",
 
   opts = {
     date_format = "%d/%m/%Y - %X",

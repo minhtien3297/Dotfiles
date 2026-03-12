@@ -49,6 +49,34 @@ local opts = {
 		enabled = true,
 	},
 
+	performance = {
+		cache = {
+			enabled = true,
+		},
+		rtp = {
+			disabled_plugins = {
+				"2html_plugin",
+				"getscript",
+				"getscriptPlugin",
+				"gzip",
+				"logipat",
+				"matchit",
+				"matchparen",
+				"netrw",
+				"netrwFileHandlers",
+				"netrwPlugin",
+				"netrwSettings",
+				"rrhelper",
+				"spellfile_plugin",
+				"tar",
+				"tarPlugin",
+				"tutor",
+				"zip",
+				"zipPlugin",
+			},
+		},
+	},
+
 	ui = {
 		size = { width = 1, height = 1 },
 	},

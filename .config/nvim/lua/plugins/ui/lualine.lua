@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	lazy = false,
+	event = "VeryLazy",
 
 	config = function()
 		local status_package_info, package_info = pcall(require, "package-info")

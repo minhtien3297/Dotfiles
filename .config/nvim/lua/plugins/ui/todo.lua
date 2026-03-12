@@ -1,5 +1,6 @@
 return {
   "folke/todo-comments.nvim",
-  lazy = false,
+  event = "BufReadPost",
+  cmd = { "TodoLocList", "TodoQuickFix", "TodoTelescope", "TodoTrouble" },
   opts = {},
 }

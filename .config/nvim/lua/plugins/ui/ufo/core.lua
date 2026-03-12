@@ -1,6 +1,6 @@
 return {
   "kevinhwang91/nvim-ufo",
-  lazy = false,
+  event = { "BufReadPost", "BufNewFile" },
 
   config = function()
     vim.o.foldcolumn = "1" -- '0' is not bad
