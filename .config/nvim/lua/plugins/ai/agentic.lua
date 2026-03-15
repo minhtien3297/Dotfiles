@@ -1,5 +1,13 @@
 return {
   "carlos-algms/agentic.nvim",
+  keys = {
+    { "<leader>//", function() require("agentic").toggle() end, desc = "Agentic: toggle chat", mode = "n" },
+    { "<leader>/s", function() require("agentic").stop_generation() end, desc = "Agentic: stop generation" },
+    { "<leader>/r", function() require("agentic").restore_session() end, desc = "Agentic: restore session" },
+    { "<leader>/n", function() require("agentic").new_session() end, desc = "Agentic: new session" },
+    { "<leader>/p", function() require("agentic").new_session_with_provider() end, desc = "Agentic: new session (provider)" },
+    { "<leader>/x", function() require("agentic").add_selection_or_file_to_context() end, desc = "Agentic: add selection/file" },
+  },
 
   opts = {
     provider = "codex-acp",

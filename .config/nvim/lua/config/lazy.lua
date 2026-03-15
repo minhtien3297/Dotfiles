@@ -46,7 +46,12 @@ local opts = {
 	},
 
 	checker = {
-		enabled = true,
+		enabled = false,
+		notify = false,
+	},
+
+	change_detection = {
+		notify = false,
 	},
 
 	performance = {

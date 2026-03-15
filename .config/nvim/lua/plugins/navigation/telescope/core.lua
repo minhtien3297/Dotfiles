@@ -1,7 +1,26 @@
 return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.6",
-  event = "VeryLazy",
+  cmd = "Telescope",
+
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-lua/popup.nvim",
+    "nvim-telescope/telescope-fzf-native.nvim",
+    "nvim-telescope/telescope-ui-select.nvim",
+    "nvim-telescope/telescope-frecency.nvim",
+  },
+
+  keys = {
+    { ";f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+    { ";b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+    { ";g", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+    { ";c", "<cmd>Telescope commands<cr>", desc = "Commands" },
+    { ";h", "<cmd>Telescope help_tags<cr>", desc = "Help" },
+    { ";r", "<cmd>Telescope registers<cr>", desc = "Registers" },
+    { ";k", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
+    { ";n", "<cmd>Telescope noice<cr>", desc = "Notifications" },
+  },
 
   config = function()
     local telescope = require("telescope")
@@ -78,6 +97,9 @@ return {
       },
     })
 
-    telescope.load_extension("noice")
+    pcall(telescope.load_extension, "fzf")
+    pcall(telescope.load_extension, "ui-select")
+    pcall(telescope.load_extension, "frecency")
+    pcall(telescope.load_extension, "noice")
   end,
 }

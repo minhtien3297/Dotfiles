@@ -1,6 +1,11 @@
 return {
 	"hrsh7th/nvim-cmp",
 	event = { "InsertEnter", "CmdlineEnter" },
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+		"onsails/lspkind.nvim",
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+	},
 
 	config = function()
 		local cmp = require("cmp")
@@ -22,8 +27,7 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
 				{ name = "codeium" },
-				{ name = "git" },
-				{ name = "dotenv" },
+				{ name = "env" },
 			},
 
 			mapping = {

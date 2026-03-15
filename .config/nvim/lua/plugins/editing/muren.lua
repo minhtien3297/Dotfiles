@@ -1,5 +1,8 @@
 return {
   "AckslD/muren.nvim",
-  event = "VeryLazy",
+  cmd = { "MurenToggle", "MurenOpen", "MurenClose" },
+  keys = {
+    { ";m", "<cmd>MurenToggle<cr>", desc = "Muren: toggle" },
+  },
   opts = {},
 }

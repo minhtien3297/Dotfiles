@@ -1,6 +1,9 @@
 return {
 	"mikavilpas/yazi.nvim",
-	event = "VeryLazy",
+	keys = {
+		{ ";;", function() require("yazi").yazi() end, desc = "Yazi" },
+		{ ";a", function() require("yazi").yazi(nil, vim.fn.getcwd()) end, desc = "Yazi (cwd)" },
+	},
 	config = function()
 		require("yazi").setup({
 			open_for_directories = true,

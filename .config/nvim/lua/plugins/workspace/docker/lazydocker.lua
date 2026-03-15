@@ -1,5 +1,11 @@
 return {
   "mgierada/lazydocker.nvim",
+  dependencies = {
+    "akinsho/toggleterm.nvim",
+  },
+  keys = {
+    { "<leader>d", function() require("lazydocker").open() end, desc = "LazyDocker" },
+  },
   config = function()
     require("lazydocker").setup({
       border = "curved", -- valid options are "single" | "double" | "shadow" | "curved"
@@ -7,5 +13,4 @@ return {
       height = 1,        -- height of the floating window (0-1 for percentage, >1 for absolute rows)
     })
   end,
-  event = "BufRead",
 }

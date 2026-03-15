@@ -1,6 +1,19 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    {
+      "rcarriga/nvim-notify",
+      opts = {
+        timeout = 1800,
+        fps = 60,
+        render = "wrapped-compact",
+        stages = "fade",
+        top_down = false,
+      },
+    },
+  },
 
   opts = {
     lsp = {

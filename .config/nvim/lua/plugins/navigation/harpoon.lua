@@ -1,7 +1,25 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  event = "VeryLazy",
+  keys = {
+    {
+      "<leader>a",
+      function()
+        local harpoon = require("harpoon")
+        harpoon:list():add()
+        vim.notify("File added to Harpoon")
+      end,
+      desc = "Harpoon: add file",
+    },
+    {
+      "<leader>e",
+      function()
+        local harpoon = require("harpoon")
+        harpoon.ui:toggle_quick_menu(harpoon:list())
+      end,
+      desc = "Harpoon: menu",
+    },
+  },
 
   config = function()
     local harpoon = require("harpoon")
@@ -16,15 +34,6 @@ return {
       },
     })
 
-    local toggle_menu = function()
-      harpoon.ui:toggle_quick_menu(harpoon:list())
-    end
-
-    local list_append = function()
-      harpoon:list():add()
-      vim.notify("File added to Harpoon")
-    end
-
     harpoon:extend({
       UI_CREATE = function(cx)
         vim.keymap.set("n", "<S-l>", function()
@@ -36,8 +45,5 @@ return {
         end, { buffer = cx.bufnr })
       end,
     })
-
-    vim.keymap.set("n", "<leader>a", list_append)
-    vim.keymap.set("n", "<leader>e", toggle_menu)
   end,
 }

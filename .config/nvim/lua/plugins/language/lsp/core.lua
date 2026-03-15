@@ -2,6 +2,10 @@ return {
   "neovim/nvim-lspconfig",
   cmd = { "LspInfo", "LspInstall", "LspStart" },
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "mfussenegger/nvim-lint",
+    "lukas-reineke/lsp-format.nvim",
+  },
 
   config = function()
     local lint = require("lint")
