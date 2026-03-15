@@ -138,3 +138,14 @@ load_nvm() {
 for cmd in nvm node npm npx pnpm yarn; do
   eval "${cmd}() { load_nvm; ${cmd} \"\$@\"; }"
 done
+
+# opencode
+export PATH=/Users/daominhtien/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/daominhtien/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

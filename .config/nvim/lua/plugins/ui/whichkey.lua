@@ -14,6 +14,7 @@ return {
     local status_yazi, yazi = pcall(require, "yazi")
     local status_lazydocker, lazydocker = pcall(require, "lazydocker")
     local status_render_markdown, render_markdown = pcall(require, "render-markdown")
+    local status_agentic, agentic = pcall(require, "agentic")
 
     if not status_builtin then
       vim.notify("telescope.builtin error")
@@ -45,11 +46,16 @@ return {
       return
     end
 
+    if not status_agentic then
+      vim.notify("agentic error")
+      return
+    end
+
     wk.setup({
       layout = { align = "center" }
     })
 
-    wk.add({
+    local keymaps = {
       { "<leader><leader>", "<cmd>:wa<CR>",                             desc = "Save files" },
 
       -- lsp
@@ -57,6 +63,16 @@ return {
       { "<leader>c",        function() vim.lsp.buf.code_action() end,   desc = "Code action", },
       { "<leader>r",        function() vim.lsp.buf.rename() end,        desc = "Rename all references", },
       { "<leader>s",        "<cmd>LspRestart<CR>",                      desc = "Lsp restart" },
+
+      -- agentic
+      { "<leader>/",  group = "agentic" },
+
+      { "<leader>//", function() agentic.toggle() end, desc = "Toggle chat", mode = "n" },
+      { "<leader>/s", function() agentic.stop_generation() end, desc = "Stop generation" },
+      { "<leader>/r", function() agentic.restore_session() end, desc = "Restore session" },
+      { "<leader>/n", function() agentic.new_session() end, desc = "New session" },
+      { "<leader>/p", function() agentic.new_session_with_provider() end, desc = "New session (provider)" },
+      { "<leader>/x", function() agentic.add_selection_or_file_to_context() end, desc = "Add selection/file" },
 
       -- lazygit
       { "<leader>f",        "<cmd>LazyGit<CR>",                         desc = "LazyGit" },
@@ -134,6 +150,8 @@ return {
       { ";lt",   function() chainsaw.timeLog() end,                     desc = "log time: 1st call start, 2nd call end" },
       { ";ld",   function() chainsaw.debugLog() end,                    desc = "debugger" },
       { ";lr",   function() chainsaw.removeLogs() end,                  desc = "remove all logs" }
-    })
+    }
+
+    wk.add(keymaps)
   end,
 }

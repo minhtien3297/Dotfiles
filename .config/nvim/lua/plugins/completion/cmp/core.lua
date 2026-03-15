@@ -10,6 +10,10 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
+			enabled = function()
+				return vim.bo.filetype ~= "AgenticInput"
+			end,
+
 			sources = {
 				{ name = "path" },
 				{ name = "buffer" },

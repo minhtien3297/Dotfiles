@@ -11,6 +11,10 @@ return {
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 				globalstatus = true,
+				disabled_filetypes = {
+					statusline = { "AgenticChat", "AgenticInput", "AgenticCode", "AgenticFiles", "AgenticDiagnostics" },
+					winbar = { "AgenticChat", "AgenticInput", "AgenticCode", "AgenticFiles", "AgenticDiagnostics" },
+				},
 			},
 
 			extensions = {
