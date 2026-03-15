@@ -1,13 +1,54 @@
 {
   "exclusionRules": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.youtube.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://classicreload.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://app.todoist.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.linkedin.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://talent-assessment.testgorilla.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://localhost:5173/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://keyboard-test.space/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://screen-ide.coderpad.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://claude.ai/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://cdcsnd1.huelms.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.todoist.com/*"
+    }
   ],
-  "settingsVersion": "2.4.0"
+  "newTabDestination": "browserNewTabPage",
+  "settingsVersion": "2.4.2"
 }
