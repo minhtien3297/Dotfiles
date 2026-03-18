@@ -14,16 +14,17 @@ return {
 
 		require("luasnip.loaders.from_vscode").lazy_load()
 
-		cmp.setup({
-			sources = {
-				{ name = "path" },
-				{ name = "buffer" },
-				{ name = "luasnip" },
-				{ name = "vsnip" },
-				{ name = "nvim_lsp" },
-				{ name = "nvim_lua" },
-				{ name = "env" },
-			},
+			cmp.setup({
+				sources = {
+					{ name = "path" },
+					{ name = "buffer" },
+					{ name = "luasnip" },
+					{ name = "vsnip" },
+					{ name = "nvim_lsp" },
+					{ name = "nvim_lua" },
+					{ name = "codeium" },
+					{ name = "env" },
+				},
 
 			mapping = {
 				["<CR>"] = cmp.mapping(function(fallback)
@@ -72,6 +73,7 @@ return {
 					mode = "symbol_text", -- show only symbol annotations
 					maxwidth = 50, -- prevent the popup from showing more than provided characters
 					ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+					symbol_map = { Codeium = "" },
 
 					before = function(entry, vim_item)
 						vim_item = require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)

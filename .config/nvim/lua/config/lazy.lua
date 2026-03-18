@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 local plugins = {
+	{ import = "plugins.ai" },
 	{ import = "plugins.completion.cmp" },
 	{ import = "plugins.completion.snippets" },
 	{ import = "plugins.editing" },
