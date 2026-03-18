@@ -1,7 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e51f2b142d88bb666dcaa77d93a07f4b419aca70" },
   "LuaSnip": { "branch": "master", "commit": "5a1e39223db9a0498024a77b8441169d260c8c25" },
-  "agentic.nvim": { "branch": "main", "commit": "b140d1b9481b60fa51c98816331724544712a84e" },
+  "agentic.nvim": { "branch": "main", "commit": "9f3fc1cc64c0107fe08e77f9924cbffda54a9f17" },
   "auto-session": { "branch": "main", "commit": "79ef41274354a486cf4f100a7adf4a7575802ccf" },
   "catppuccin": { "branch": "main", "commit": "cb5665990a797b102715188e73c44c3931b3b42e" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
