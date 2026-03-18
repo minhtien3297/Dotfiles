@@ -14,7 +14,6 @@ return {
     })
 
     wk.add({
-      { "<leader>/", group = "agentic" },
       { ";l", group = "chainsaw" },
     })
   end,
