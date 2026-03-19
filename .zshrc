@@ -76,13 +76,12 @@ alias t='tmux'
 alias l='lg'
 alias d='lazydocker'
 alias c='clear'
+alias o='opencode'
 alias ls='eza -l --icons --git -a --no-user --no-permissions'
 alias upt='brew update && brew upgrade && brew cleanup && clear'
 alias zshrc='source ~/.zshrc'
 alias python='/usr/bin/python3'
 alias -- run='~/run_project.sh'
-alias -- sa='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_rsa'
-alias -- saw='eval $(ssh-agent -s) && ~/ssh-add.sh ~/.ssh/id_ed25519'
 
 lg() {
   local new_dir_file="$HOME/.lazygit/newdir"
