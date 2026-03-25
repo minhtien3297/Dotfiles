@@ -9,5 +9,6 @@ if vim.loader then
 end
 
 require("base")
+require("config.autosave").setup()
 require("config.keymaps")
 require("config.lazy")

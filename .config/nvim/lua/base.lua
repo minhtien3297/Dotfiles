@@ -49,6 +49,12 @@ vim.opt.timeoutlen = 250
 vim.opt.timeout = true
 vim.opt.updatetime = 250
 
+-- Allow Neovim tools installed by Mason to be resolved by formatters/linters.
+local mason_bin = vim.fn.stdpath("data") .. "/mason/bin"
+if vim.fn.isdirectory(mason_bin) == 1 then
+	vim.env.PATH = mason_bin .. ":" .. vim.env.PATH
+end
+
 -- show column right hand
 vim.opt.colorcolumn = "0"
 
