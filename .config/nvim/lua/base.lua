@@ -24,8 +24,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- spell check
-vim.opt.spell = true
+-- spell check is enabled only for text-oriented filetypes below
+vim.opt.spell = false
 vim.opt.spelllang = "en"
 
 -- turn off mode show in command
@@ -65,4 +65,15 @@ vim.opt.conceallevel = 2
 vim.diagnostic.config({
   virtual_text = false,
   virtual_lines = true
+})
+
+local spell_group = vim.api.nvim_create_augroup("LocalSpell", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = spell_group,
+  pattern = { "gitcommit", "markdown", "text", "plaintex" },
+  callback = function(args)
+    vim.opt_local.spell = true
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+  end,
 })
