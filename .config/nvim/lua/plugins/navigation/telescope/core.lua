@@ -11,27 +11,30 @@ return {
     "nvim-telescope/telescope-frecency.nvim",
   },
 
-  keys = {
-    { ";f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-    { ";b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-    { ";g", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
-    { ";c", "<cmd>Telescope commands<cr>", desc = "Commands" },
-    { ";h", "<cmd>Telescope help_tags<cr>", desc = "Help" },
-    { ";r", "<cmd>Telescope registers<cr>", desc = "Registers" },
-    { ";k", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
-    { ";n", "<cmd>Telescope noice<cr>", desc = "Notifications" },
-  },
-
   config = function()
     local telescope = require("telescope")
+    local builtin = require("telescope.builtin")
+    local sorters = require("telescope.sorters")
     local telescope_preview = require("telescope.previewers.utils")
     local telescope_themes = require("telescope.themes")
     local actions = require("telescope.actions")
     local telescope_config = require("telescope.config")
 
+    local function buffer_search_root()
+      local buffer_name = vim.api.nvim_buf_get_name(0)
+      local start_path = buffer_name ~= "" and vim.fs.dirname(buffer_name) or vim.uv.cwd()
+      local root_markers = { ".git", "package.json", "pyproject.toml", "Cargo.toml", "go.mod", ".hg" }
+      local project_root = vim.fs.root(start_path, root_markers)
+
+      return project_root or start_path
+    end
+
     local vimgrep_arguments = { unpack(telescope_config.values.vimgrep_arguments) }
     table.insert(vimgrep_arguments, "--glob")
     table.insert(vimgrep_arguments, "!**/.git/*")
+    table.insert(vimgrep_arguments, "--hidden")
+    table.insert(vimgrep_arguments, "--follow")
+    table.insert(vimgrep_arguments, "--smart-case")
 
     telescope.setup({
       defaults = {
@@ -77,8 +80,9 @@ return {
 
       pickers = {
         find_files = {
-          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-
+          hidden = true,
+          follow = true,
+          find_command = { "rg", "--files", "--hidden", "--follow", "--glob", "!**/.git/*" },
         },
       },
 
@@ -101,5 +105,32 @@ return {
     pcall(telescope.load_extension, "ui-select")
     pcall(telescope.load_extension, "frecency")
     pcall(telescope.load_extension, "noice")
+
+    vim.keymap.set("n", ";f", function()
+      builtin.find_files({
+        cwd = buffer_search_root(),
+        sorter = sorters.get_substr_matcher(),
+      })
+    end, { desc = "Find files" })
+
+    vim.keymap.set("n", ";g", function()
+      builtin.live_grep({
+        cwd = buffer_search_root(),
+        additional_args = function()
+          return { "--hidden", "--follow", "--smart-case" }
+        end,
+      })
+    end, { desc = "Live grep" })
   end,
+
+  keys = {
+    { ";f", desc = "Find files" },
+    { ";b", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+    { ";g", desc = "Live grep" },
+    { ";c", "<cmd>Telescope commands<cr>", desc = "Commands" },
+    { ";h", "<cmd>Telescope help_tags<cr>", desc = "Help" },
+    { ";r", "<cmd>Telescope registers<cr>", desc = "Registers" },
+    { ";k", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
+    { ";n", "<cmd>Telescope noice<cr>", desc = "Notifications" },
+  },
 }
