@@ -69,3 +69,7 @@ XDG_CACHE_HOME=/tmp XDG_STATE_HOME=/tmp nvim --headless '+lua require("config.au
 - Do not revert unrelated user changes.
 - Avoid committing generated files unless they are intentional.
 - Keep plugin lockfile changes separate from config behavior changes when practical.
+
+## Dotfiles Stow
+
+After modifying any file in this directory, run `stow -R .` from the Dotfiles root to apply changes:
