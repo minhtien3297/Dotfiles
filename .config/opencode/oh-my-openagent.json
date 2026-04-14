@@ -1,0 +1,140 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "prometheus": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "metis": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "oracle": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "hephaestus": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "atlas": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "momus": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "explore": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "librarian": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "multimodal-looker": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "ultrabrain": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "deep": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "artistry": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "quick": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "unspecified-low": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "unspecified-high": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    },
+    "writing": {
+      "model": "opencode/big-pickle",
+      "fallback_models": [
+        "opencode/minimax-m2.5",
+        "opencode/nemotron-3-super"
+      ]
+    }
+  }
+}
