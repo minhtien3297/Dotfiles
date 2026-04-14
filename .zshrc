@@ -227,4 +227,5 @@ esac
 # WARNING: API keys should not be stored in plain text in configuration files.
 # Consider using a secure secret manager or environment-specific configuration.
 # export OPENROUTER_API_KEY="your-key-here"
- End of Docker CLI completions
+
+# End of Docker CLI completions
