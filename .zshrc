@@ -1,8 +1,24 @@
+
+#!/usr/bin/env zsh
+#
+# ~/.zshrc - Zsh configuration file
+#
+# This file is sourced by interactive zsh shells for configuration.
+# Last updated: $(date +%Y-%m-%d) - Refactored for organization and security
+#
+# ------------------------------------------------------------------------------
+# 1. ENVIRONMENT VARIABLES
+# ------------------------------------------------------------------------------
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LANG="en_US.UTF-8"
 export MANPATH="/usr/local/man${MANPATH:+:$MANPATH}"
 export NVM_DIR="$HOME/.nvm"
+
+# ------------------------------------------------------------------------------
+# 2. OH MY ZSH SETTINGS
+# ------------------------------------------------------------------------------
 
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
@@ -10,22 +26,37 @@ zstyle ':omz:update' frequency 7
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
-typeset -U path fpath
+# OpenCode settings
+export OMO_SEND_ANONYMOUS_TELEMETRY=0
 
+# ------------------------------------------------------------------------------
+# 3. PATH AND FPATH SETUP
+# ------------------------------------------------------------------------------
+
+typeset -U path fpath  # Ensure unique entries in PATH and fpath
+
+# Add directories to PATH if they exist
 for dir in \
   /opt/homebrew/bin \
   /opt/homebrew/sbin \
-  "$HOME/.antigravity/antigravity/bin"
+  "$HOME/.antigravity/antigravity/bin" \
+  "$HOME/.bun/bin" \
+  "$HOME/.opencode/bin"
 do
   [[ -d "$dir" ]] && path=("$dir" $path)
 done
 
+# Add completion directories to fpath
 for dir in \
   "$HOME/.docker/completions" \
   "${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-completions/src"
 do
   [[ -d "$dir" ]] && fpath=("$dir" $fpath)
 done
+
+# ------------------------------------------------------------------------------
+# 4. PLUGINS
+# ------------------------------------------------------------------------------
 
 plugins=(
   zoxide
@@ -36,15 +67,31 @@ plugins=(
   zsh-completions
 )
 
+# ------------------------------------------------------------------------------
+# 5. HELPER FUNCTIONS
+# ------------------------------------------------------------------------------
+
 source_if_exists() {
   [[ -r "$1" ]] && source "$1"
 }
 
+# ------------------------------------------------------------------------------
+# 6. OH MY ZSH INITIALIZATION
+# ------------------------------------------------------------------------------
+
 source "$ZSH/oh-my-zsh.sh"
+
+# ------------------------------------------------------------------------------
+# 7. KEY BINDINGS
+# ------------------------------------------------------------------------------
 
 bindkey -e
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
+
+# ------------------------------------------------------------------------------
+# 8. HISTORY SETTINGS
+# ------------------------------------------------------------------------------
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=5000
@@ -59,6 +106,10 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# ------------------------------------------------------------------------------
+# 9. COMPLETION STYLING
+# ------------------------------------------------------------------------------
+
 zstyle ':fzf-tab:*' popup-min-size 80 12
 zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
@@ -71,6 +122,10 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 
+# ------------------------------------------------------------------------------
+# 10. ALIASES
+# ------------------------------------------------------------------------------
+
 alias n='nvim'
 alias t='tmux'
 alias l='lg'
@@ -82,6 +137,10 @@ alias upt='brew update && brew upgrade && brew cleanup && clear'
 alias zshrc='source ~/.zshrc'
 alias python='/usr/bin/python3'
 alias -- run='~/run_project.sh'
+
+# ------------------------------------------------------------------------------
+# 11. FUNCTIONS
+# ------------------------------------------------------------------------------
 
 lg() {
   local new_dir_file="$HOME/.lazygit/newdir"
@@ -107,6 +166,10 @@ y() {
   rm -f -- "$tmp"
 }
 
+# ------------------------------------------------------------------------------
+# 12. TOOL COMPLETIONS
+# ------------------------------------------------------------------------------
+
 if command -v ngrok >/dev/null 2>&1; then
   eval "$(ngrok completion)"
 fi
@@ -128,18 +191,24 @@ if command -v mole >/dev/null 2>&1; then
   eval "$(mole completion zsh 2>/dev/null)"
 fi
 
+# ------------------------------------------------------------------------------
+# 13. NVM LAZY LOADING
+# ------------------------------------------------------------------------------
+
 load_nvm() {
   unfunction nvm node npm npx pnpm yarn 2>/dev/null
   source_if_exists "$NVM_DIR/nvm.sh"
   source_if_exists "$NVM_DIR/bash_completion"
 }
 
+# Lazy loading: Only load NVM when nvm/node/npm/etc commands are actually invoked
 for cmd in nvm node npm npx pnpm yarn; do
   eval "${cmd}() { load_nvm; ${cmd} \"\$@\"; }"
 done
 
-# opencode
-export PATH=/Users/daominhtien/.opencode/bin:$PATH
+# ------------------------------------------------------------------------------
+# 14. PNPM PATH SETUP
+# ------------------------------------------------------------------------------
 
 # pnpm
 export PNPM_HOME="/Users/daominhtien/Library/pnpm"
@@ -148,8 +217,14 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/daominhtien/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
+
+# ------------------------------------------------------------------------------
+# 15. SECURITY NOTES
+# ------------------------------------------------------------------------------
+
+# Docker completions are already handled in the fpath setup section above
+
+# WARNING: API keys should not be stored in plain text in configuration files.
+# Consider using a secure secret manager or environment-specific configuration.
+# export OPENROUTER_API_KEY="your-key-here"
+ End of Docker CLI completions
