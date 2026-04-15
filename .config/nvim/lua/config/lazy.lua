@@ -31,8 +31,7 @@ local plugins = {
 	{ import = "plugins.ui" },
 	{ import = "plugins.ui.noice" },
 	{ import = "plugins.ui.ufo" },
-	{ import = "plugins.workspace" },
-	{ import = "plugins.workspace.docker" },
+	{ import = "plugins.docker" },
 }
 
 local opts = {

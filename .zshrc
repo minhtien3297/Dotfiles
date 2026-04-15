@@ -122,11 +122,20 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # ------------------------------------------------------------------------------
 # 10. ALIASES
 # ------------------------------------------------------------------------------
 
-alias n='nvim'
+unalias n 2>/dev/null
+n() {
+  command nvim "$@"
+  if [[ -f "$HOME/.nvim_last_dir" ]]; then
+    cd "$(cat "$HOME/.nvim_last_dir")" 2>/dev/null
+  fi
+}
 alias t='tmux'
 alias l='lg'
 alias d='lazydocker'
@@ -228,4 +237,9 @@ esac
 # Consider using a secure secret manager or environment-specific configuration.
 # export OPENROUTER_API_KEY="your-key-here"
 
+# End of Docker CLI completions
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/daominhtien/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
 # End of Docker CLI completions
