@@ -2,138 +2,157 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "sisyphus-junior": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/minimax-m2.7",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "prometheus": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "metis": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "oracle": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "hephaestus": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/kimi-k2.5",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "atlas": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "momus": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/mimo-v2-pro",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "explore": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/minimax-m2.7",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "librarian": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/minimax-m2.7",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "multimodal-looker": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/mimo-v2-omni",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/mimo-v2-omni",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "ultrabrain": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "deep": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5.1",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "artistry": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/kimi-k2.5",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "quick": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/minimax-m2.7",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "unspecified-low": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/minimax-m2.7",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "unspecified-high": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     },
     "writing": {
-      "model": "opencode/big-pickle",
+      "model": "opencode-go/glm-5",
       "fallback_models": [
-        "opencode/minimax-m2.5",
-        "opencode/nemotron-3-super"
+        "opencode/big-pickle",
+        "opencode/minimax-m2.5-free",
+        "opencode/nemotron-3-super-free"
       ]
     }
   }
