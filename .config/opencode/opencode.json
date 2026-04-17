@@ -4,5 +4,12 @@
     "@mohak34/opencode-notifier@latest",
     "oh-my-openagent",
     "@tarquinen/opencode-dcp@latest"
-  ]
+  ],
+  "mcp": {
+    "figma-mcp-go": {
+      "command": ["npx", "-y", "@vkhanhqui/figma-mcp-go@latest"],
+      "type": "local",
+      "enabled": true
+    }
+  }
 }
