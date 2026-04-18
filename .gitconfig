@@ -4,7 +4,6 @@
 [core]
 	editor = nvim
 	whitespace = -trailing-space
-	hooksPath = /Users/daominhtien/.git-hooks
 
 [diff]
 	colorMoved = true
