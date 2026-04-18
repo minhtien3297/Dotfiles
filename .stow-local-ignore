@@ -1,0 +1,6 @@
+.pre-commit-config.yaml
+AGENTS.md
+README.md
+apps
+.git
+.stow-local-ignore

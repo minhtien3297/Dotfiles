@@ -1,6 +1,15 @@
 repos:
+  # === Security: Secret Detection ===
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: v8.30.1                    # Latest as of April 2026
     hooks:
       - id: gitleaks
-        args: ["--staged"]
+        args: [--staged]            # Only scan staged changes → much faster
+
+  # === General code hygiene (highly recommended) ===
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0                     # Latest stable
+    hooks:
+      - id: trailing-whitespace     # Remove extra spaces at end of lines
+      - id: end-of-file-fixer       # Ensure file ends with a newline
+      - id: check-merge-conflict    # Block files with merge conflict markers

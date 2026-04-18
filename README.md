@@ -27,7 +27,7 @@ brew install \
   grep aria2 ffmpeg yt-dlp eza difftastic zsh yazi \
   ffmpegthumbnailer unar jq poppler glow exiftool ouch \
   imagemagick bat btop jesseduffield/lazydocker/lazydocker \
-  mole uv gemini-cli
+  mole uv gitleaks gemini-cli
 
 # Install CLI apps (Casks)
 brew install --cask \
