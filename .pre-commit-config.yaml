@@ -11,5 +11,4 @@ repos:
     rev: v6.0.0                     # Latest stable
     hooks:
       - id: trailing-whitespace     # Remove extra spaces at end of lines
-      - id: end-of-file-fixer       # Ensure file ends with a newline
       - id: check-merge-conflict    # Block files with merge conflict markers
