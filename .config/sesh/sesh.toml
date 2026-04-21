@@ -9,10 +9,26 @@ path = "~"
 startup_command = "mole status"
 
 [[session]]
+name = "AI"
+path = "~"
+startup_command = "opencode"
+windows = [ "codex", "gemini"]
+
+[[window]]
+name = "codex"
+path = "~"
+startup_script = "codex"
+
+[[window]]
+name = "gemini"
+path = "~"
+startup_script = "gemini"
+
+[[session]]
 name = "Learn"
 path = "~/Thoughts/Areas/productivity"
 startup_command = "yazi"
-windows = [ "FreeCodeCamp", "NeetCode" ]
+windows = [ "FreeCodeCamp", "NeetCode", "OutSystems"]
 
 [[window]]
 name = "FreeCodeCamp"
@@ -22,4 +38,9 @@ startup_script = "yazi"
 [[window]]
 name = "NeetCode"
 path = "~/Thoughts/Projects/Neetcode"
+startup_script = "yazi"
+
+[[window]]
+name = "OutSystems"
+path = "~/Thoughts/Projects/OutSystems"
 startup_script = "yazi"
