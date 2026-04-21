@@ -17,8 +17,10 @@ macOS development environment managed via GNU Stow. Shell: Zsh + Oh My Zsh. Edit
 Dotfiles/
 ├── .bashrc                    # Bash fallback shell
 ├── .gitconfig                 # Git config (difft, rebase, main branch)
+├── .mcp.json                  # MCP Server configurations (agentation-mcp)
+├── .nvim_last_dir             # State file for n() shell function (synced via stow)
 ├── .vimrc                     # Minimal vim config
-├── .zshrc                     # Primary shell (Oh My Zsh, ~239 lines)
+├── .zshrc                     # Primary shell (Oh My Zsh, ~246 lines)
 ├── .ssh/config                # SSH configuration
 ├── run_project.sh             # Generic project runner (detects npm/pnpm/yarn)
 ├── README.md                  # Setup instructions
@@ -49,14 +51,28 @@ Dotfiles/
 | Update Tmux plugins | `prefix + I` (default prefix: `Ctrl+Space`) |
 | Update Brew packages | `upt` (alias for brew update/upgrade/cleanup) |
 | Run a project | `run` or `~/run_project.sh` |
+| File Manager | `y` (yazi with cwd-on-exit) |
+| Lazygit | `l` or `lg` (with cwd-on-exit) |
 
 ## Shell Conventions (.zshrc)
 
 - **Plugin manager**: Oh My Zsh with plugins: zoxide, starship, fzf-tab, zsh-syntax-highlighting, zsh-autosuggestions, zsh-completions
 - **Prompt**: Starship with Catppuccin Mocha palette
+- **Completion**: Uses `fzf-tab` with tmux popup support and eza previews for `cd`/`z`.
 - **Conditional sourcing**: Uses `source_if_exists()` helper — follow this pattern for new additions
 - **NVM**: Lazy-loaded — only invokes when nvm/node/npm/pnpm/yarn is called
-- **Key aliases**: `n`=nvim, `t`=tmux, `l`=lazygit, `d`=lazydocker, `o`=opencode, `ls`=eza --icons
+- **Key Aliases/Functions**:
+  - `n`: Neovim (syncs CWD on exit via `~/.nvim_last_dir`)
+  - `t`: Tmux
+  - `l` / `lg`: Lazygit (syncs CWD on exit)
+  - `y`: Yazi (syncs CWD on exit)
+  - `d`: Lazydocker
+  - `o`: OpenCode
+  - `ls`: `eza -l --icons --git -a --no-user --no-permissions`
+
+## MCP Servers (.mcp.json)
+
+- **agentation**: Uses `agentation-mcp` server for interactive annotations.
 
 ## Tmux (.config/tmux)
 

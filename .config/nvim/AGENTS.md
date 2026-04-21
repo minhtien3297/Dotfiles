@@ -45,6 +45,12 @@ This Neovim config is a Lua-based setup built around `lazy.nvim`.
 - Autosave currently runs on `FocusLost` and saves the current modified file buffer.
 - Avoid reintroducing `lsp-format.nvim` or any second formatting-on-save path unless the user explicitly wants overlapping behavior.
 
+## Common Workflows
+
+- **Directory Sync on Exit**: The shell alias `n` (in `.zshrc`) is configured to `cd` to the last directory visited in Neovim upon exit. This is achieved by Neovim writing to `~/.nvim_last_dir`.
+- **Plugin Management**: Use `:Lazy` to manage plugins. Use `:Lazy sync` to update everything.
+- **LSP/Formatters**: Use `:Mason` to install or update language servers, formatters, and linters.
+
 ## Testing
 
 Run from `.config/nvim/` when possible.
@@ -54,6 +60,7 @@ Run from `.config/nvim/` when possible.
 luac -p init.lua lua/base.lua lua/config/autosave.lua lua/config/keymaps.lua
 
 # Minimal config load with writable cache/state paths
+# Useful for verifying that plugins can load headlessly
 XDG_CACHE_HOME=/tmp XDG_STATE_HOME=/tmp nvim --headless '+lua require("config.autosave").setup()' '+lua require("config.lazy")' '+qa'
 ```
 
@@ -73,3 +80,6 @@ XDG_CACHE_HOME=/tmp XDG_STATE_HOME=/tmp nvim --headless '+lua require("config.au
 ## Dotfiles Stow
 
 After modifying any file in this directory, run `stow -R .` from the Dotfiles root to apply changes:
+```bash
+cd ~/Dotfiles && stow -R .
+```
