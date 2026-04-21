@@ -6,6 +6,10 @@
     "@tarquinen/opencode-dcp@latest"
   ],
   "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    },
     "figma-mcp-go": {
       "command": ["npx", "-y", "@vkhanhqui/figma-mcp-go@latest"],
       "type": "local",

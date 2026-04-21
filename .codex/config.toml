@@ -1,0 +1,44 @@
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+service_tier = "fast"
+personality = "pragmatic"
+
+[projects."/Users/daominhtien/Projects/document"]
+trust_level = "trusted"
+
+[projects."/Users/daominhtien/Projects"]
+trust_level = "trusted"
+
+[projects."/Users/daominhtien/Downloads"]
+trust_level = "trusted"
+
+[projects."/Users/daominhtien/Dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/daominhtien/Thoughts"]
+trust_level = "trusted"
+
+[projects."/Users/daominhtien"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.2" = "gpt-5.4"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[mcp_servers.agentation]
+command = "npx"
+args = ["-y", "agentation-mcp", "server"]
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest"]
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir"]
+terminal_title = ["spinner", "project", "status", "git-branch", "model", "task-progress"]
+
+[features]
+memories = true
