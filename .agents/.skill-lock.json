@@ -1,0 +1,744 @@
+{
+  "version": 3,
+  "skills": {
+    "acquire-codebase-knowledge": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/acquire-codebase-knowledge/SKILL.md",
+      "skillFolderHash": "21f240c8fa6898781ca7154e282ec8c79e420c20",
+      "installedAt": "2026-04-14T10:38:13.934Z",
+      "updatedAt": "2026-04-14T10:38:13.934Z"
+    },
+    "add-educational-comments": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/add-educational-comments/SKILL.md",
+      "skillFolderHash": "e9d3c89ab799b5a833c302ef45bd77eef5639c88",
+      "installedAt": "2026-04-14T10:38:15.207Z",
+      "updatedAt": "2026-04-14T10:38:15.207Z"
+    },
+    "agent-governance": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/agent-governance/SKILL.md",
+      "skillFolderHash": "b76e562c86d4c19ecaa1b857967399ff239147a9",
+      "installedAt": "2026-04-14T10:38:16.463Z",
+      "updatedAt": "2026-04-14T10:38:16.463Z"
+    },
+    "agent-owasp-compliance": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/agent-owasp-compliance/SKILL.md",
+      "skillFolderHash": "1b9d0266771e9f87a3e26d375ab38188399315bd",
+      "installedAt": "2026-04-14T10:38:17.513Z",
+      "updatedAt": "2026-04-14T10:38:17.513Z"
+    },
+    "agent-supply-chain": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/agent-supply-chain/SKILL.md",
+      "skillFolderHash": "7c9231a915167858a34fb12cb23727bc433d3671",
+      "installedAt": "2026-04-14T10:38:18.733Z",
+      "updatedAt": "2026-04-14T10:38:18.733Z"
+    },
+    "agentic-eval": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/agentic-eval/SKILL.md",
+      "skillFolderHash": "2322ac3a69fa63b58268525481bf684b9ddf51a3",
+      "installedAt": "2026-04-14T10:38:19.952Z",
+      "updatedAt": "2026-04-14T10:38:19.952Z"
+    },
+    "ai-prompt-engineering-safety-review": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "skillFolderHash": "5479c057f0edef6e7956d1e3700ad28a6170f3e4",
+      "installedAt": "2026-04-14T10:38:21.179Z",
+      "updatedAt": "2026-04-14T10:38:21.179Z"
+    },
+    "appinsights-instrumentation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/appinsights-instrumentation/SKILL.md",
+      "skillFolderHash": "79c414b98f3e1f0a917141c5243f64677b41792a",
+      "installedAt": "2026-04-14T10:38:22.436Z",
+      "updatedAt": "2026-04-14T10:38:22.436Z"
+    },
+    "apple-appstore-reviewer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/apple-appstore-reviewer/SKILL.md",
+      "skillFolderHash": "0fded17e5b9bd5515a0c8849b2d8be10162311b0",
+      "installedAt": "2026-04-14T10:38:23.678Z",
+      "updatedAt": "2026-04-14T10:38:23.678Z"
+    },
+    "arch-linux-triage": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arch-linux-triage/SKILL.md",
+      "skillFolderHash": "148fe897a1a9574e87a843ae85d8114b70f1693e",
+      "installedAt": "2026-04-14T10:38:25.280Z",
+      "updatedAt": "2026-04-14T10:38:25.280Z"
+    },
+    "architecture-blueprint-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/architecture-blueprint-generator/SKILL.md",
+      "skillFolderHash": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
+      "installedAt": "2026-04-14T10:38:26.522Z",
+      "updatedAt": "2026-04-14T10:38:26.522Z"
+    },
+    "arize-ai-provider-integration": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-ai-provider-integration/SKILL.md",
+      "skillFolderHash": "16448b391eb0c1e73b9395d39f472fc1ece65cd6",
+      "installedAt": "2026-04-14T10:38:27.751Z",
+      "updatedAt": "2026-04-14T10:38:27.751Z"
+    },
+    "arize-annotation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-annotation/SKILL.md",
+      "skillFolderHash": "e8db9969e50ec8cd935820e17a5becc7e5fdfd62",
+      "installedAt": "2026-04-14T10:38:28.453Z",
+      "updatedAt": "2026-04-14T10:38:28.453Z"
+    },
+    "arize-dataset": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-dataset/SKILL.md",
+      "skillFolderHash": "f85365cc87a5bff9776d9ce7fc4117ab3a95a256",
+      "installedAt": "2026-04-14T10:38:29.672Z",
+      "updatedAt": "2026-04-14T10:38:29.672Z"
+    },
+    "arize-evaluator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-evaluator/SKILL.md",
+      "skillFolderHash": "e17adf992ae78598a29d3343984808397adfa817",
+      "installedAt": "2026-04-14T10:38:30.895Z",
+      "updatedAt": "2026-04-14T10:38:30.895Z"
+    },
+    "arize-experiment": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-experiment/SKILL.md",
+      "skillFolderHash": "47be50c3c7ac297d63a00aee8578bc99f20ca0e7",
+      "installedAt": "2026-04-14T10:38:32.115Z",
+      "updatedAt": "2026-04-14T10:38:32.115Z"
+    },
+    "arize-instrumentation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-instrumentation/SKILL.md",
+      "skillFolderHash": "68b594d36d2289c18f37ea4c308189ab4fb23d3f",
+      "installedAt": "2026-04-14T10:38:32.935Z",
+      "updatedAt": "2026-04-14T10:38:32.935Z"
+    },
+    "arize-link": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-link/SKILL.md",
+      "skillFolderHash": "dabf19cd400932a576a158308a8cb6835012fbca",
+      "installedAt": "2026-04-14T10:38:34.198Z",
+      "updatedAt": "2026-04-14T10:38:34.198Z"
+    },
+    "arize-prompt-optimization": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-prompt-optimization/SKILL.md",
+      "skillFolderHash": "849d3e5be4b19a97fe03ae419c66f18ef42e73d0",
+      "installedAt": "2026-04-14T10:38:35.392Z",
+      "updatedAt": "2026-04-14T10:38:35.392Z"
+    },
+    "arize-trace": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/arize-trace/SKILL.md",
+      "skillFolderHash": "bd4cd60af55503775e3e8a85c7c9e1ea96c440ea",
+      "installedAt": "2026-04-14T10:38:36.665Z",
+      "updatedAt": "2026-04-14T10:38:36.665Z"
+    },
+    "aspire": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/aspire/SKILL.md",
+      "skillFolderHash": "afafff53a657a959d83109b5da558426126eec74",
+      "installedAt": "2026-04-14T10:38:37.943Z",
+      "updatedAt": "2026-04-14T10:38:37.943Z"
+    },
+    "aspnet-minimal-api-openapi": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/aspnet-minimal-api-openapi/SKILL.md",
+      "skillFolderHash": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
+      "installedAt": "2026-04-14T10:38:39.183Z",
+      "updatedAt": "2026-04-14T10:38:39.183Z"
+    },
+    "automate-this": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/automate-this/SKILL.md",
+      "skillFolderHash": "34b3970d2ea68bad05fbcde019773d488ece6348",
+      "installedAt": "2026-04-14T10:38:40.422Z",
+      "updatedAt": "2026-04-14T10:38:40.422Z"
+    },
+    "autoresearch": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/autoresearch/SKILL.md",
+      "skillFolderHash": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
+      "installedAt": "2026-04-14T10:38:41.663Z",
+      "updatedAt": "2026-04-14T10:38:41.663Z"
+    },
+    "aws-cdk-python-setup": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/aws-cdk-python-setup/SKILL.md",
+      "skillFolderHash": "7aed6e86e09b4fe1dcc845378c0f9c7b1a131823",
+      "installedAt": "2026-04-14T10:38:42.874Z",
+      "updatedAt": "2026-04-14T10:38:42.874Z"
+    },
+    "az-cost-optimize": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/az-cost-optimize/SKILL.md",
+      "skillFolderHash": "75941e175066d21b970698c2f3e00de19f5c1c91",
+      "installedAt": "2026-04-14T10:38:44.137Z",
+      "updatedAt": "2026-04-14T10:38:44.137Z"
+    },
+    "azure-architecture-autopilot": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-architecture-autopilot/SKILL.md",
+      "skillFolderHash": "fb0590cd648c88f027f8cfd2c0bd94b94c563118",
+      "installedAt": "2026-04-14T10:38:45.215Z",
+      "updatedAt": "2026-04-14T10:38:45.215Z"
+    },
+    "azure-deployment-preflight": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-deployment-preflight/SKILL.md",
+      "skillFolderHash": "afd342b91f93a9a0fc955f08253b626a1d4c9740",
+      "installedAt": "2026-04-14T10:38:46.498Z",
+      "updatedAt": "2026-04-14T10:38:46.498Z"
+    },
+    "azure-devops-cli": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-devops-cli/SKILL.md",
+      "skillFolderHash": "53b8eb72d68fb8d90c3a813cd04a069e5224f71e",
+      "installedAt": "2026-04-14T10:38:47.190Z",
+      "updatedAt": "2026-04-14T10:38:47.190Z"
+    },
+    "azure-pricing": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-pricing/SKILL.md",
+      "skillFolderHash": "dc69c6dbacbef673d76ba5490fb16b53002d0222",
+      "installedAt": "2026-04-14T10:38:48.581Z",
+      "updatedAt": "2026-04-14T10:38:48.581Z"
+    },
+    "azure-resource-health-diagnose": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-resource-health-diagnose/SKILL.md",
+      "skillFolderHash": "71189536f8c004ba49573919329adda948a7373d",
+      "installedAt": "2026-04-14T10:38:49.585Z",
+      "updatedAt": "2026-04-14T10:38:49.585Z"
+    },
+    "azure-resource-visualizer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-resource-visualizer/SKILL.md",
+      "skillFolderHash": "4db4c3a3f1175067ae5c2cc9b1d2bf1593a87fb0",
+      "installedAt": "2026-04-14T10:38:50.190Z",
+      "updatedAt": "2026-04-14T10:38:50.190Z"
+    },
+    "azure-role-selector": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-role-selector/SKILL.md",
+      "skillFolderHash": "a640be3febf621401502b10e6cd7505e84c85dec",
+      "installedAt": "2026-04-14T10:38:51.471Z",
+      "updatedAt": "2026-04-14T10:38:51.471Z"
+    },
+    "azure-static-web-apps": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/azure-static-web-apps/SKILL.md",
+      "skillFolderHash": "f0cb53abab29a33c9b30b93c3c9f2d30fff76ef1",
+      "installedAt": "2026-04-14T10:38:53.208Z",
+      "updatedAt": "2026-04-14T10:38:53.208Z"
+    },
+    "bigquery-pipeline-audit": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/bigquery-pipeline-audit/SKILL.md",
+      "skillFolderHash": "320d9dbbca1b3702a6c0f5f25dfd5967e36a18f7",
+      "installedAt": "2026-04-14T10:38:54.534Z",
+      "updatedAt": "2026-04-14T10:38:54.534Z"
+    },
+    "boost-prompt": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/boost-prompt/SKILL.md",
+      "skillFolderHash": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+      "installedAt": "2026-04-14T10:38:56.230Z",
+      "updatedAt": "2026-04-14T10:38:56.230Z"
+    },
+    "breakdown-epic-arch": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-epic-arch/SKILL.md",
+      "skillFolderHash": "b74b2c68bcc53e4b5378230061b8cfa57bd425df",
+      "installedAt": "2026-04-14T10:38:57.913Z",
+      "updatedAt": "2026-04-14T10:38:57.913Z"
+    },
+    "breakdown-epic-pm": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-epic-pm/SKILL.md",
+      "skillFolderHash": "2e27f6e92fffd53db64dc746f49d5a59fe8df716",
+      "installedAt": "2026-04-14T10:38:59.197Z",
+      "updatedAt": "2026-04-14T10:38:59.197Z"
+    },
+    "breakdown-feature-implementation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-feature-implementation/SKILL.md",
+      "skillFolderHash": "b6e0cb11429c215c7227c119dc8e0f3fc84007e8",
+      "installedAt": "2026-04-14T10:39:00.430Z",
+      "updatedAt": "2026-04-14T10:39:00.430Z"
+    },
+    "breakdown-feature-prd": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-feature-prd/SKILL.md",
+      "skillFolderHash": "7f673bff9b8356b220727a372838ac0a59e0db0b",
+      "installedAt": "2026-04-14T10:39:01.650Z",
+      "updatedAt": "2026-04-14T10:39:01.650Z"
+    },
+    "breakdown-plan": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-plan/SKILL.md",
+      "skillFolderHash": "46ab78a4abbe716aefa6e4adb158d160da809414",
+      "installedAt": "2026-04-14T10:39:03.150Z",
+      "updatedAt": "2026-04-14T10:39:03.150Z"
+    },
+    "breakdown-test": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/breakdown-test/SKILL.md",
+      "skillFolderHash": "2b3157ccefd5d7b881c17c1eda7d371b18f56a8b",
+      "installedAt": "2026-04-14T10:39:04.457Z",
+      "updatedAt": "2026-04-14T10:39:04.457Z"
+    },
+    "centos-linux-triage": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/centos-linux-triage/SKILL.md",
+      "skillFolderHash": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
+      "installedAt": "2026-04-14T10:39:05.515Z",
+      "updatedAt": "2026-04-14T10:39:05.515Z"
+    },
+    "chrome-devtools": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/chrome-devtools/SKILL.md",
+      "skillFolderHash": "1425ccd89c83988f6bdbc9e801f81e9f1faf86ea",
+      "installedAt": "2026-04-14T10:39:06.743Z",
+      "updatedAt": "2026-04-14T10:39:06.743Z"
+    },
+    "cli-mastery": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/cli-mastery/SKILL.md",
+      "skillFolderHash": "0e5f15fdd7cd35446fe0a6655bcc10a01453f590",
+      "installedAt": "2026-04-14T10:39:07.966Z",
+      "updatedAt": "2026-04-14T10:39:07.966Z"
+    },
+    "cloud-design-patterns": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/cloud-design-patterns/SKILL.md",
+      "skillFolderHash": "7e9d6507fbcd924c634c276246d6baa061538edb",
+      "installedAt": "2026-04-14T10:39:09.271Z",
+      "updatedAt": "2026-04-14T10:39:09.271Z"
+    },
+    "code-exemplars-blueprint-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/code-exemplars-blueprint-generator/SKILL.md",
+      "skillFolderHash": "3d60e45078101dfd26d19cdab072f48fcb262589",
+      "installedAt": "2026-04-14T10:39:10.477Z",
+      "updatedAt": "2026-04-14T10:39:10.477Z"
+    },
+    "code-tour": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/code-tour/SKILL.md",
+      "skillFolderHash": "4092b96dd32d93e85ca0384adecb126973717cee",
+      "installedAt": "2026-04-14T10:39:11.681Z",
+      "updatedAt": "2026-04-14T10:39:11.681Z"
+    },
+    "codeql": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/codeql/SKILL.md",
+      "skillFolderHash": "bbbd09572c265f3a57b2dfbe958f1c64e1828ee1",
+      "installedAt": "2026-04-14T10:39:12.251Z",
+      "updatedAt": "2026-04-14T10:39:12.251Z"
+    },
+    "comment-code-generate-a-tutorial": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/comment-code-generate-a-tutorial/SKILL.md",
+      "skillFolderHash": "630c21880072799dd9c79144710e081f17746761",
+      "installedAt": "2026-04-14T10:39:13.446Z",
+      "updatedAt": "2026-04-14T10:39:13.446Z"
+    },
+    "containerize-aspnet-framework": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/containerize-aspnet-framework/SKILL.md",
+      "skillFolderHash": "3f6837d3412931b068f87ab97dd4444d14421057",
+      "installedAt": "2026-04-14T10:39:14.688Z",
+      "updatedAt": "2026-04-14T10:39:14.688Z"
+    },
+    "containerize-aspnetcore": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/containerize-aspnetcore/SKILL.md",
+      "skillFolderHash": "6f53cb7c1f8c8749d300de4a3986028ee8dc152d",
+      "installedAt": "2026-04-14T10:39:15.327Z",
+      "updatedAt": "2026-04-14T10:39:15.327Z"
+    },
+    "context-map": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/context-map/SKILL.md",
+      "skillFolderHash": "8b684d625e209fc960011407e2e504fa2ff2cad8",
+      "installedAt": "2026-04-14T10:39:16.584Z",
+      "updatedAt": "2026-04-14T10:39:16.584Z"
+    },
+    "conventional-commit": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/conventional-commit/SKILL.md",
+      "skillFolderHash": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
+      "installedAt": "2026-04-14T10:39:17.625Z",
+      "updatedAt": "2026-04-14T10:39:17.625Z"
+    },
+    "convert-plaintext-to-md": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/convert-plaintext-to-md/SKILL.md",
+      "skillFolderHash": "1e13c30fa3b4a91234339acaeb7efd33d3b72a62",
+      "installedAt": "2026-04-14T10:39:18.670Z",
+      "updatedAt": "2026-04-14T10:39:18.670Z"
+    },
+    "copilot-cli-quickstart": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/copilot-cli-quickstart/SKILL.md",
+      "skillFolderHash": "826de0aecedd0cf2d107d02efe2c1d725eeaf0f8",
+      "installedAt": "2026-04-14T10:39:19.997Z",
+      "updatedAt": "2026-04-14T10:39:19.997Z"
+    },
+    "copilot-instructions-blueprint-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/copilot-instructions-blueprint-generator/SKILL.md",
+      "skillFolderHash": "a67fccf32fc28eda70e5868e65e61e2fce3e64ef",
+      "installedAt": "2026-04-14T10:39:21.286Z",
+      "updatedAt": "2026-04-14T10:39:21.286Z"
+    },
+    "copilot-sdk": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/copilot-sdk/SKILL.md",
+      "skillFolderHash": "15de894db34f65e9b9a5a2437c2f024b2377468b",
+      "installedAt": "2026-04-14T10:39:22.508Z",
+      "updatedAt": "2026-04-14T10:39:22.508Z"
+    },
+    "copilot-spaces": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/copilot-spaces/SKILL.md",
+      "skillFolderHash": "729e40b9bfc47572111dccc63ea6c941230cc319",
+      "installedAt": "2026-04-14T10:39:23.519Z",
+      "updatedAt": "2026-04-14T10:39:23.519Z"
+    },
+    "copilot-usage-metrics": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/copilot-usage-metrics/SKILL.md",
+      "skillFolderHash": "c624955b348dbd9e51d83fa906896e8fce1c187c",
+      "installedAt": "2026-04-14T10:39:24.810Z",
+      "updatedAt": "2026-04-14T10:39:24.810Z"
+    },
+    "cosmosdb-datamodeling": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/cosmosdb-datamodeling/SKILL.md",
+      "skillFolderHash": "77c0c0bdae7dd095afed1f317558a2c0a5cbbec0",
+      "installedAt": "2026-04-14T10:39:25.495Z",
+      "updatedAt": "2026-04-14T10:39:25.495Z"
+    },
+    "create-agentsmd": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-agentsmd/SKILL.md",
+      "skillFolderHash": "290ab8ae85ba8695e9bceb674e74177e76f8633d",
+      "installedAt": "2026-04-14T10:39:26.734Z",
+      "updatedAt": "2026-04-14T10:39:26.734Z"
+    },
+    "create-architectural-decision-record": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-architectural-decision-record/SKILL.md",
+      "skillFolderHash": "b7a90ff5b56ab9cdc674cee2c415bee46cbbf394",
+      "installedAt": "2026-04-14T10:39:28.011Z",
+      "updatedAt": "2026-04-14T10:39:28.011Z"
+    },
+    "create-github-action-workflow-specification": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-github-action-workflow-specification/SKILL.md",
+      "skillFolderHash": "ee740bda6b10915c695084fced55fb4067bebd6b",
+      "installedAt": "2026-04-14T10:39:29.309Z",
+      "updatedAt": "2026-04-14T10:39:29.309Z"
+    },
+    "create-github-issue-feature-from-specification": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-github-issue-feature-from-specification/SKILL.md",
+      "skillFolderHash": "200d493d9bf618fa2ce34e45f773f8ba03d820c4",
+      "installedAt": "2026-04-14T10:39:30.560Z",
+      "updatedAt": "2026-04-14T10:39:30.560Z"
+    },
+    "create-github-issues-feature-from-implementation-plan": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+      "skillFolderHash": "e9c8ec75105420d2086d84b5d3c40fe721bd3622",
+      "installedAt": "2026-04-14T10:39:31.611Z",
+      "updatedAt": "2026-04-14T10:39:31.611Z"
+    },
+    "create-github-issues-for-unmet-specification-requirements": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-github-issues-for-unmet-specification-requirements/SKILL.md",
+      "skillFolderHash": "45404d3f8b658f8b6041ce33fb816564cb0358de",
+      "installedAt": "2026-04-14T10:39:32.834Z",
+      "updatedAt": "2026-04-14T10:39:32.834Z"
+    },
+    "create-github-pull-request-from-specification": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-github-pull-request-from-specification/SKILL.md",
+      "skillFolderHash": "530438a8ddfd059e4c74d6b79e6156a24344ca28",
+      "installedAt": "2026-04-14T10:39:33.908Z",
+      "updatedAt": "2026-04-14T10:39:33.908Z"
+    },
+    "create-implementation-plan": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-implementation-plan/SKILL.md",
+      "skillFolderHash": "dbd2ff5df455bcc96aaf084cf2f86c208062d06b",
+      "installedAt": "2026-04-14T10:39:35.160Z",
+      "updatedAt": "2026-04-14T10:39:35.160Z"
+    },
+    "create-llms": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-llms/SKILL.md",
+      "skillFolderHash": "d03fe373e24fb06f2d63a6df54731f37dbfee4d9",
+      "installedAt": "2026-04-14T10:39:36.869Z",
+      "updatedAt": "2026-04-14T10:39:36.869Z"
+    },
+    "create-readme": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-readme/SKILL.md",
+      "skillFolderHash": "f65537a3461b663121fe195697979c17a8004ea5",
+      "installedAt": "2026-04-14T10:39:37.666Z",
+      "updatedAt": "2026-04-14T10:39:37.666Z"
+    },
+    "create-specification": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-specification/SKILL.md",
+      "skillFolderHash": "f239cdf1d57a710ec5cde8bfa812aece38b91749",
+      "installedAt": "2026-04-14T10:39:38.920Z",
+      "updatedAt": "2026-04-14T10:39:38.920Z"
+    },
+    "create-spring-boot-java-project": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-spring-boot-java-project/SKILL.md",
+      "skillFolderHash": "ce5277c65a1650ee128aa277b0afb59c6b02ed35",
+      "installedAt": "2026-04-14T10:39:40.137Z",
+      "updatedAt": "2026-04-14T10:39:40.137Z"
+    },
+    "create-spring-boot-kotlin-project": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-spring-boot-kotlin-project/SKILL.md",
+      "skillFolderHash": "53f0f6b431d38f19ec3c3555b24a2ed5b667418f",
+      "installedAt": "2026-04-14T10:39:41.195Z",
+      "updatedAt": "2026-04-14T10:39:41.195Z"
+    },
+    "create-technical-spike": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-technical-spike/SKILL.md",
+      "skillFolderHash": "65f850071712386064b40c0bddef0e06c922604d",
+      "installedAt": "2026-04-14T10:39:42.865Z",
+      "updatedAt": "2026-04-14T10:39:42.865Z"
+    },
+    "create-tldr-page": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/create-tldr-page/SKILL.md",
+      "skillFolderHash": "feacfdacc77e98fc56c606ebfdf1bb3c9a69e4d4",
+      "installedAt": "2026-04-14T10:39:44.107Z",
+      "updatedAt": "2026-04-14T10:39:44.107Z"
+    },
+    "creating-oracle-to-postgres-master-migration-plan": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/creating-oracle-to-postgres-master-migration-plan/SKILL.md",
+      "skillFolderHash": "452e39f2f8b2d253c903ab6d4ed69dd6c61bdb58",
+      "installedAt": "2026-04-14T10:39:45.861Z",
+      "updatedAt": "2026-04-14T10:39:45.861Z"
+    },
+    "creating-oracle-to-postgres-migration-bug-report": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/creating-oracle-to-postgres-migration-bug-report/SKILL.md",
+      "skillFolderHash": "e142f650ee99cf432d60278b0764983bcbfc5c3a",
+      "installedAt": "2026-04-14T10:39:47.112Z",
+      "updatedAt": "2026-04-14T10:39:47.112Z"
+    },
+    "creating-oracle-to-postgres-migration-integration-tests": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
+      "skillFolderHash": "185906a19c99051da4e0fa8726b817642422f723",
+      "installedAt": "2026-04-14T10:39:48.382Z",
+      "updatedAt": "2026-04-14T10:39:48.382Z"
+    },
+    "csharp-async": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/csharp-async/SKILL.md",
+      "skillFolderHash": "d4a1f9827d947b66c98581399424fd9510d1a8bf",
+      "installedAt": "2026-04-14T10:39:49.610Z",
+      "updatedAt": "2026-04-14T10:39:49.610Z"
+    },
+    "csharp-docs": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/csharp-docs/SKILL.md",
+      "skillFolderHash": "11399c92c99088f48697c5e29cd39f594f8642c6",
+      "installedAt": "2026-04-14T10:39:50.827Z",
+      "updatedAt": "2026-04-14T10:39:50.827Z"
+    },
+    "csharp-mcp-server-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/csharp-mcp-server-generator/SKILL.md",
+      "skillFolderHash": "1fcb642ed5fcf7f86c51c0893715d00d76091932",
+      "installedAt": "2026-04-14T10:39:51.838Z",
+      "updatedAt": "2026-04-14T10:39:51.838Z"
+    }
+  },
+  "dismissed": {}
+}
