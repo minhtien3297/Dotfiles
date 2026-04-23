@@ -2,158 +2,63 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "sisyphus-junior": {
-      "model": "opencode-go/minimax-m2.7",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "prometheus": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "metis": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "oracle": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "hephaestus": {
-      "model": "opencode-go/kimi-k2.5",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "atlas": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "momus": {
-      "model": "opencode-go/mimo-v2-pro",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "explore": {
-      "model": "opencode-go/minimax-m2.7",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "librarian": {
-      "model": "opencode-go/minimax-m2.7",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "multimodal-looker": {
-      "model": "opencode-go/mimo-v2-omni",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "opencode-go/mimo-v2-omni",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "ultrabrain": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "deep": {
-      "model": "opencode-go/glm-5.1",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "artistry": {
-      "model": "opencode-go/kimi-k2.5",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "quick": {
-      "model": "opencode-go/minimax-m2.7",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "unspecified-low": {
-      "model": "opencode-go/minimax-m2.7",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "unspecified-high": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     },
     "writing": {
-      "model": "opencode-go/glm-5",
-      "fallback_models": [
-        "opencode/big-pickle",
-        "opencode/minimax-m2.5-free",
-        "opencode/nemotron-3-super-free"
-      ]
+      "model": "9router/free-models"
     }
   }
 }

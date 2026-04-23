@@ -1,7 +1,7 @@
 repos:
   # === Security: Secret Detection ===
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.30.1                    # Latest as of April 2026
+    rev: v8.30.0                    # Latest as of April 2026
     hooks:
       - id: gitleaks
         args: [--staged]            # Only scan staged changes → much faster

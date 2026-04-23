@@ -237,6 +237,12 @@ esac
 # Consider using a secure secret manager or environment-specific configuration.
 # export OPENROUTER_API_KEY="your-key-here"
 
+# 9router API key for OpenCode (loaded from environment)
+# export OPENCODE_9ROUTER_API_KEY="your-9router-api-key-here"
+
+# Source local configuration (not tracked by git)
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
 # End of Docker CLI completions
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/daominhtien/.docker/completions $fpath)

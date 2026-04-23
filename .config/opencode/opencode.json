@@ -8,12 +8,42 @@
   "mcp": {
     "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
     },
     "figma-mcp-go": {
-      "command": ["npx", "-y", "@vkhanhqui/figma-mcp-go@latest"],
+      "command": [
+        "npx",
+        "-y",
+        "@vkhanhqui/figma-mcp-go@latest"
+      ],
       "type": "local",
       "enabled": true
+    }
+  },
+  "provider": {
+    "9router": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:20128/v1",
+        "apiKey": "${OPENCODE_9ROUTER_API_KEY}"
+      },
+      "models": {
+        "free-models": {
+          "name": "free-models"
+        }
+      }
+    }
+  },
+  "model": "9router/free-models",
+  "agent": {
+    "explorer": {
+      "description": "Fast explorer subagent for codebase exploration",
+      "mode": "subagent",
+      "model": "9router/free-models"
     }
   }
 }

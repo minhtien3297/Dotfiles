@@ -1,0 +1,5 @@
+# Local configuration files (not tracked)
+.zshrc.local
+.env
+.env.local
+*.local
