@@ -12,7 +12,7 @@ startup_command = "mole status"
 name = "AI"
 path = "~"
 startup_command = "opencode"
-windows = [ "codex", "gemini"]
+windows = [ "codex", "gemini", "copilot", "shell"]
 
 [[window]]
 name = "codex"
@@ -23,6 +23,15 @@ startup_script = "codex"
 name = "gemini"
 path = "~"
 startup_script = "gemini"
+
+[[window]]
+name = "copilot"
+path = "~"
+startup_script = "copilot"
+
+[[window]]
+name = "shell"
+path = "~"
 
 [[session]]
 name = "Learn"
