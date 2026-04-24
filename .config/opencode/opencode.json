@@ -29,7 +29,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "http://localhost:20128/v1",
-        "apiKey": "${OPENCODE_9ROUTER_API_KEY}"
+        "apiKey": "$ROUTER_API_KEY"
       },
       "models": {
         "free-models": {
