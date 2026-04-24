@@ -6,3 +6,6 @@
 
 # OpenCode state files
 .config/opencode/opencode-notifier-state.json
+
+# Neovim state
+.nvim_last_dir
