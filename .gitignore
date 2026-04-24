@@ -3,3 +3,6 @@
 .env
 .env.local
 *.local
+
+# OpenCode state files
+.config/opencode/opencode-notifier-state.json
