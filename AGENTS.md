@@ -4,6 +4,7 @@ macOS development environment managed via GNU Stow. Shell: Zsh + Oh My Zsh. Edit
 
 ## Working Rules
 
+- **Auto-restow on changes**: After any file modification, automatically run `stow -R .` from repo root to apply changes to the home directory.
 - Run `stow -R .` from repo root after modifying any file to apply changes.
 - Do not add Brewfile, Makefile, or CI/CD — this repo is manual-only by design.
 - Keep changes small and targeted to the relevant config file.
@@ -81,12 +82,12 @@ Dotfiles/
 - **Plugins**: tmux-resurrect, tmux-continuum (via TPM)
 - **macOS**: Uses `reattach-to-user-namespace` for clipboard
 
-## Git (.gitconfig)
+## Git Workflow
 
 - Default branch: `main`
-- Pull strategy: rebase
-- Diff tool: `difftastic`
-- `rerere.enabled = true`
+- **Commit process**: After changes, stage and commit on feature branch, then create PR and push to `main`.
+- **Push to main**: When user requests push to main, create a PR and push the branch.
+- Use conventional commit style (`feat:`, `fix:`, `docs:`, etc.) matching recent commits.
 
 ## Neovim (.config/nvim)
 

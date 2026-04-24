@@ -5,3 +5,6 @@ apps
 .git
 .gitignore
 .stow-local-ignore
+.env
+.env.local
+*.local

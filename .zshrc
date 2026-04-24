@@ -195,6 +195,7 @@ fi
 
 source_if_exists "$HOME/.atuin/bin/env"
 source_if_exists "$HOME/.local/bin/env"
+source_if_exists "$HOME/Dotfiles/.env"
 
 if command -v mole >/dev/null 2>&1; then
   eval "$(mole completion zsh 2>/dev/null)"
@@ -228,21 +229,10 @@ esac
 # pnpm end
 
 # ------------------------------------------------------------------------------
-# 15. SECURITY NOTES
+# 15. DOCKER SETUP
 # ------------------------------------------------------------------------------
 
 # Docker completions are already handled in the fpath setup section above
-
-# WARNING: API keys should not be stored in plain text in configuration files.
-# Consider using a secure secret manager or environment-specific configuration.
-# export OPENROUTER_API_KEY="your-key-here"
-
-# 9router API key for OpenCode (loaded from environment)
-# export OPENCODE_9ROUTER_API_KEY="your-9router-api-key-here"
-
-# Source local configuration (not tracked by git)
-[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
-
 # End of Docker CLI completions
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/daominhtien/.docker/completions $fpath)
