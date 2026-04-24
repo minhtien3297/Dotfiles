@@ -3,4 +3,5 @@ AGENTS.md
 README.md
 apps
 .git
+.gitignore
 .stow-local-ignore
