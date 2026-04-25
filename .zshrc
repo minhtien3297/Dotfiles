@@ -239,3 +239,101 @@ fpath=(/Users/daominhtien/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+export _ZO_EXCLUDE_DIRS="node_modules .git target dist build cache __pycache__ *.egg-info /mnt /Volumes /net /media"
+
+# Note: zoxide init is handled by Oh My Zsh plugin (see plugins array above)
+# eval "$(zoxide init zsh)"  # <-- REMOVED to prevent duplicate hooks
+
+# ------------------------------------------------------------------------------
+# 16. ZF FILE-WORKFLOW HELPER
+# ------------------------------------------------------------------------------
+
+
+# Jump to the best directory for a given file path using zoxide.
+# Usage: zf <file-path>
+# Example: zf readme.md -> finds dirs containing readme.md via zoxide query
+zf_old() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: zf <file-path>"
+    echo "Jump to the best directory for a file path using zoxide."
+    return 1
+  fi
+
+  local file_path="$1"
+  local dir
+
+  # Extract directory from the file path
+  dir=$(dirname "$file_path")
+
+  # Use zoxide query to find the best matching directory
+  local target
+  target=$(zoxide query "$dir" 2>/dev/null)
+
+  if [[ -n "$target" && -d "$target" ]]; then
+    cd "$target"
+  elif [[ -d "$dir" ]]; then # Fallback: if zoxide has no match, try to cd directly
+    cd "$dir"
+  else
+    echo "zoxide: no match found for directory: $dir"
+    return 1
+  fi
+}
+
+# zf: Jump to directory containing a file (fast, no fzf)
+# Usage: zf <file-name>
+# Uses fd to find first match, then jumps to its directory.
+zf() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: zf <file-name-pattern>"
+        echo "Finds a file using 'fd' and jumps to its directory (first match)."
+        return 1
+    fi
+
+    local file
+    # Find the file using fd, honoring .gitignore, and excluding common noise.
+    file=$(fd --type f --hidden --exclude "{$_ZO_EXCLUDE_DIRS}" "$1" 2>/dev/null | head -1)
+
+    if [[ -n "$file" ]]; then
+        local dir
+        dir=$(dirname "$file")
+        if [[ -d "$dir" ]]; then
+            cd "$dir"
+        else
+            echo "Error: Could not change to directory: $dir"
+            return 1
+        fi
+    else
+        echo "No file found matching: $1"
+        return 1
+    fi
+}
+
+
+# ------------------------------------------------------------------------------
+# 16. ZOXIDE SCOPE HELPERS
+# ------------------------------------------------------------------------------
+
+zp() {
+  local target="${1:-}"
+  local dir=""
+
+  if [[ -n "$target" ]]; then
+    dir=$(zoxide query --base-dir ~/Projects "$target" 2>/dev/null)
+    [[ -z "$dir" ]] && dir=$(zoxide query --base-dir ~/Documents "$target" 2>/dev/null)
+    [[ -z "$dir" ]] && dir=$(zoxide query "$target" 2>/dev/null)
+  else
+    dir=$(zoxide query --base-dir ~/Projects 2>/dev/null)
+    [[ -z "$dir" ]] && dir=$(zoxide query --base-dir ~/Documents 2>/dev/null)
+    [[ -z "$dir" ]] && dir=$(zoxide query 2>/dev/null)
+  fi
+
+  if [[ -n "$dir" && -d "$dir" ]]; then
+    cd "$dir"
+  else
+    [[ -n "$target" ]] && echo "zoxide: no match found for: $target" || echo "zoxide: no match found"
+    return 1
+  fi
+}
+alias zp_pj='cd ~/Projects'
+alias zp_doc='cd ~/Documents'

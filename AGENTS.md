@@ -85,9 +85,9 @@ Dotfiles/
 ## Git Workflow
 
 - Default branch: `main`
-- **Commit process**: After changes, stage and commit on feature branch, then create PR and push to `main`.
-- **Push to main**: When user requests push to main, create a PR and push the branch.
-- Use conventional commit style (`feat:`, `fix:`, `docs:`, etc.) matching recent commits.
+- **Commit process**: After each atomic change, stage and commit on a feature branch with a conventional commit message (`feat:`, `fix:`, `docs:`, etc.). Make one commit per logical change.
+- **Push workflow**: Push each commit to the feature branch as it is created. When the work is complete and verified, create a single PR that includes all commits for the overall task.
+- Use conventional commit style matching recent commits; each commit should represent one self-contained change.
 
 ## Neovim (.config/nvim)
 

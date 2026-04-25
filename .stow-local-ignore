@@ -7,4 +7,4 @@ apps
 .stow-local-ignore
 .env
 .env.local
-*.local
+.local
